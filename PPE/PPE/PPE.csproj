@@ -66,10 +66,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Enquetes\enquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Enquetes\ListeEnquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\ListeQuizz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\quiz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Settings\About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="Pages\Enquetes\enquete.xaml.cs">
+      <DependentUpon>enquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\ListeEnquete.xaml.cs">
+      <DependentUpon>ListeEnquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\ListeQuizz.xaml.cs">
+      <DependentUpon>ListeQuizz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\quiz.xaml.cs">
+      <DependentUpon>quiz.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Settings\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
@@ -95,11 +123,26 @@
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Sondages\ListeSondage.xaml.cs">
+      <DependentUpon>ListeSondage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sondages\sondage.xaml.cs">
+      <DependentUpon>sondage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="Pages\Sondages\ListeSondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sondages\sondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
