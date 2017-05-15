@@ -5,10 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
-             d:DesignHeight="235" d:DesignWidth="390">
+             d:DesignHeight="758" d:DesignWidth="1004">
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
-            <ListView x:Name="listView_Sondage" Height="190" Width="330" BorderBrush="Black" BorderThickness="1">
+            <ListView x:Name="listView_Sondage" Height="600" Width="956" BorderBrush="Black" BorderThickness="1">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Nom"/>

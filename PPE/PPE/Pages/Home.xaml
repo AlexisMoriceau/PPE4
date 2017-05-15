@@ -4,12 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Style="{StaticResource ContentRoot}">
+             d:DesignHeight="768" d:DesignWidth="1024">
+    <Grid Style="{StaticResource ContentRoot}" Height="700" Width="958">
         <ScrollViewer>
-            <StackPanel MinWidth="200">
-                <TextBlock Text="Veuillez vous connecter" />
-            </StackPanel>
+            <TextBlock Text="Veuillez vous connecter" />
         </ScrollViewer>
+        <TextBox x:Name="TextBox_Login" Text="Identifiant" Width="auto" Height="auto" GotFocus="TextBox_Login_GotFocus" Margin="369,300,359,375"/>
+        <Label x:Name="Label_Password" Content="Mot de passe : " Height="auto" Width="auto" Margin="253,345,588,330" RenderTransformOrigin="1.187,0.635"/>
+        <PasswordBox x:Name="PasswordBox" Width="auto" Height="auto" Margin="370,345,359,330"/>
+        <Button x:Name="button_connect" Content="Connexion" Width="auto" Height="auto" Click="button_connect_Click" Margin="436,402,424,272"/>
     </Grid>
 </UserControl>

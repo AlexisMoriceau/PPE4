@@ -24,5 +24,15 @@ namespace PPE.Pages
         {
             InitializeComponent();
         }
+
+        private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox_Login.Text = "";
+        }
+
+        private void button_connect_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
