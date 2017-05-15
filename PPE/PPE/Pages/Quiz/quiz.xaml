@@ -12,7 +12,7 @@
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
                 <mui:Link DisplayName="Liste des Quizz" Source="/Pages/Quiz/ListeQuizz.xaml"/>
-                <mui:Link DisplayName="Ajouter un Quizz" />
+                <mui:Link DisplayName="Ajouter un Quizz" Source="/Pages/Quiz/AjoutQuizz.xaml"/>
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>
