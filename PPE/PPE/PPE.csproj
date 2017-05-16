@@ -85,11 +85,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Enquetes\ModificationEnquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Enquetes\ModificationSequence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Quiz\AjoutQuizz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Quiz\ListeQuizz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\ModificationQuiz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,11 +125,20 @@
     <Compile Include="Pages\Enquetes\ListeEnquete.xaml.cs">
       <DependentUpon>ListeEnquete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Enquetes\ModificationEnquete.xaml.cs">
+      <DependentUpon>ModificationEnquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\ModificationSequence.xaml.cs">
+      <DependentUpon>ModificationSequence.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Quiz\AjoutQuizz.xaml.cs">
       <DependentUpon>AjoutQuizz.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Quiz\ListeQuizz.xaml.cs">
       <DependentUpon>ListeQuizz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\ModificationQuiz.xaml.cs">
+      <DependentUpon>ModificationQuiz.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Quiz\quiz.xaml.cs">
       <DependentUpon>quiz.xaml</DependentUpon>
@@ -153,6 +174,9 @@
     <Compile Include="Pages\Sondages\ListeSondage.xaml.cs">
       <DependentUpon>ListeSondage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Sondages\ModificationSondage.xaml.cs">
+      <DependentUpon>ModificationSondage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Sondages\sondage.xaml.cs">
       <DependentUpon>sondage.xaml</DependentUpon>
     </Compile>
@@ -162,6 +186,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Sondages\ListeSondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sondages\ModificationSondage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
