@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PPE.Pages.Enquetes.AjoutEnquete"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="567.2" d:DesignWidth="1090.167" Background="White">
+    <Grid Style="{StaticResource ContentRoot}">
+        <Label  x:Name="label_Enquete" Content="Remplissez les différents champ puis valider votre enquête" Margin="0,0,730.4,498.2"/>
+        <TextBox x:Name="textBox_Nom" Text="Saisir le nom de votre enquête" Margin="63,30,778.4,466.2" GotFocus="textBox_Nom_GotFocus"/>
+        <Label x:Name="label_Theme" Content="Choix du thème" Margin="576,33,377.4,463.2"/>
+        <ComboBox x:Name="comboBox_Theme" Margin="701,33,48.4,463.2"/>
+        <Label x:Name="label_SousTheme" Content="Choix du sous-thème" Margin="553,83,377.4,416.2"/>
+        <ComboBox x:Name="comboBox_SousTheme" Margin="701,83,48.4,413.2"/>
+        <Label x:Name="label_Sequence" Content="Choix des séquences" Margin="63,188,858.4,312.2"/>
+        <DataGrid x:Name="dataGrid_Sequence" Margin="187,188,159.4,52.2" BorderBrush="Black" BorderThickness="1">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Nom de la séquence">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox x:Name="textBox_Sequence" BorderThickness="1" BorderBrush="Yellow"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Configuration de la séquence">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="button_Config" Content="Config" Binding.SourceUpdated="button_Config_SourceUpdated"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

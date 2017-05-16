@@ -1,5 +1,4 @@
-﻿using FirstFloor.ModernUI.Windows.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,21 +16,23 @@ using System.Windows.Shapes;
 namespace PPE.Pages.Enquetes
 {
     /// <summary>
-    /// Interaction logic for AjoutSequence.xaml
+    /// Interaction logic for AjoutEnquete.xaml
     /// </summary>
-    public partial class AjoutSequence : ModernDialog
+    public partial class AjoutEnquete : UserControl
     {
-        public AjoutSequence()
+        public AjoutEnquete()
         {
             InitializeComponent();
-
-            // define the dialog buttons
-            this.Buttons = new Button[] { this.OkButton, this.CancelButton };
         }
 
-        private void textBox_Sequence_GotFocus(object sender, RoutedEventArgs e)
+        private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
         {
-            textBox_Sequence.Text = "";
+
+        }
+
+        private void button_Config_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+
         }
     }
 }

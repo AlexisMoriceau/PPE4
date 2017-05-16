@@ -69,7 +69,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Enquetes\AjoutSequence.xaml">
+    <Page Include="Pages\Enquetes\AjoutEnquete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,8 +97,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="Pages\Enquetes\AjoutSequence.xaml.cs">
-      <DependentUpon>AjoutSequence.xaml</DependentUpon>
+    <Compile Include="Pages\Enquetes\AjoutEnquete.xaml.cs">
+      <DependentUpon>AjoutEnquete.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Enquetes\enquete.xaml.cs">
       <DependentUpon>enquete.xaml</DependentUpon>

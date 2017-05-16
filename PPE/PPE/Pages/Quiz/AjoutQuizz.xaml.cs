@@ -27,7 +27,7 @@ namespace PPE.Pages.Quiz
 
         private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
         {
-
+            textBox_Nom.Text = "";
         }
     }
 }
