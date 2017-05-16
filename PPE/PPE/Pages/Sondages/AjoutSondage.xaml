@@ -4,32 +4,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-             mc:Ignorable="d" 
-             d:DesignHeight="758" d:DesignWidth="1004">
+             mc:Ignorable="d" Background="#FFF3EEEE" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
-        <Label x:Name="label_Ajout" Content="Renseigner les différents champs puis valider afin d'ajouter un sondage" Margin="0,0,626,692.4"/>
-        <TextBox x:Name="textBox_Nom" Text="Saisissez un nom pour votre sondage" Margin="82,51,675,638.4" GotFocus="textBox_Nom_GotFocus" RenderTransformOrigin="0.5,0.5"/>
-        <Label x:Name="label_Theme" Content="Choix du thème :" Margin="511,51,362,638.4"/>
-        <ComboBox x:Name="comboBox_Theme" Margin="629,51,59,638.4"/>
-        <Label x:Name="label_SousTheme" Content="Choix du sous-thème :"  Margin="480,95,362,594.4"/>
-        <ComboBox x:Name="comboBox_SousTheme" Margin="629,95,59,594.4"/>
-        <Label x:Name="label_Question" Content="Choissisez une question parmi celle proposé ci-dessous ou bien ajoutez-en une :" Margin="82,166,419,523.4"/>
-        <Button x:Name="button_Question" Content="Ajouter" Margin="511,166,346,523.4" Click="button_Question_Click"/>
-        <ListView x:Name="listView_Question" BorderBrush="Black" BorderThickness="1" Margin="82,196,346,353.4">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Intitulé de la question"></GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label x:Name="label_Reponse" Content="Choissisez les différentes réponses possible pour votre question. Il est aussi possible d''ajouter des réponses :" Margin="82,388,303,301.4"/>
-        <Button x:Name="button_Reponse" Content="Ajouter" Margin="674,384,183,305.4" Click="button_Reponse_Click"/>
-        <ListView x:Name="listView_Reponse" BorderBrush="Black" BorderThickness="1" Margin="82,438,346,122.4">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Intitulé de la réponse"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Label x:Name="label_Sondage" Margin="0,0,717.4,505.2" Content="Remplissez les différents champs puis valider votre sondage"/>
+        <TextBox x:Name="textBox_Nom" Text="Saisir le Nom de votre sondage" Margin="68,39,779.4,460.2" GotFocus="textBox_Nom_GotFocus"/>
+        <Label x:Name="label_Theme" Margin="630,39,326.4,460.2" Content="Choix du thème :" />
+        <ComboBox x:Name="comboBox_Theme" Margin="752,39,60.4,460.2"/>
+        <Label x:Name="label_SousTheme" Margin="601,76,326.4,426.2" Content="Choix du sous-thème :"/>
+        <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2"/>
+        <Label x:Name="label_Question" Margin="68,160,823.4,339.2" Content="Saisissez votre question :"/>
+        <TextBox x:Name="textBox_Question" Margin="217,160,222.4,339.2"/>
+        <Label x:Name="label_Reponse" Margin="75,189,852.4,310.2" Content="Saisissez vos réponses :"/>
+        <DataGrid x:Name="dataGrid_Reponse" Margin="217,189,222.4,118.2" BorderBrush="Black" BorderThickness="1">
+            <DataGridCell>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <TextBox x:Name="textBox_Reponse" FontSize="8" Text=""/>
+                    </Border>
+                </DataTemplate>
+            </DataGridCell>
+        </DataGrid>
     </Grid>
 </UserControl>

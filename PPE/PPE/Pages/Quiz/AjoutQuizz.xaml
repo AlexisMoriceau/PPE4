@@ -5,31 +5,23 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
-             d:DesignHeight="758" d:DesignWidth="1004">
+             d:DesignHeight="567.2" d:DesignWidth="1090.167" Background="#FFFAFAFA">
     <Grid Style="{StaticResource ContentRoot}">
-        <Label x:Name="label_Quizz" Content="Renseigner les différents champs puis validez votre Quizz" Margin="0,0,644,693.4"/>
-        <TextBox x:Name="textBox_Nom" Text="Saisissez un nom pour votre Quizz" Margin="93,46,684,644.4" GotFocus="textBox_Nom_GotFocus"/>
-        <Label x:Name="label_Theme" Content="Choix du thème :" Margin="560,46,315,644.4"/>
-        <ComboBox x:Name="comboBox_Theme" Margin="686,46,68,644.4"/>
-        <Label x:Name="label_SousTheme" Content="Choix du sous-thème :" Margin="529,93,315,597.4"/>
-        <ComboBox x:Name="comboBox_SousTheme" Margin="686,93,68,597.4"/>
-        <Label x:Name="label_Question" Content="Choisissez une question dans la liste ci-dessous ou bien ajoutez-en une :" Margin="49,155,520,535.4"/>
-        <Button x:Name="button_Question" Content="Ajouter" Margin="457,155,407,535.4" Click="button_Question_Click"/>
-        <ListView x:Name="listView_Question" BorderBrush="Black" BorderThickness="1" Margin="49,197,407,385.4">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Intitulé de la question"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label x:Name="label_Reponse" Content="Choisissez les différentes réponses possible pour votre question. Il est aussi possible d'ajouter des réponses :" Margin="49,373,331,317.4"/>
-        <Button x:Name="button_Reponse" Content="Ajouter" Margin="641,369,223,321.4" Click="button_Reponse_Click"/>
-        <ListView x:Name="listView_Reponse" BorderBrush="Black" BorderThickness="1" Margin="49,416,407,103.4">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Intitulé de la réponse"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Label x:Name="label_Quizz" Content="Remplissez les différents champs puis valider votre quiz" Margin="0,0,758.4,501.2"/>
+        <TextBox x:Name="textBox_Nom" Margin="75,50,787.4,448.2" Text="Saisissez le titre de votre quizz" GotFocus="textBox_Nom_GotFocus"/>
+        <Label x:Name="label_Theme" Content="Choix du thème" Margin="610,53,359.4,448.2"/>
+        <ComboBox x:Name="comboBox_Theme" Margin="738,50,71.4,448.2"/>
+        <Label x:Name="label_SousTheme" Margin="582,80,334.4,418.2" Content="Choix du sous-thème"/>
+        <ComboBox x:Name="comboBox_SousTheme" Margin="738,80,71.4,418.2"/>
+        <Label x:Name="label_Question" Margin="75,182,838.4,316.2" Content="Saisir votre question" />
+        <TextBox x:Name="textBox_Question" Margin="220,182,284.4,316.2"/>
+        <Label x:Name="label_Reponse" Margin="75,244,868.4,245.2" Content="Saisir vos réponses"/>
+        <DataGrid x:Name="dataGrid_Reponse" Margin="220,244,284.4,56.2" BorderBrush="Black" BorderThickness="1" >
+            <DataGridCell>
+                <DataTemplate>
+                    <TextBox x:Name="textBox_Reponse" />
+                </DataTemplate>
+            </DataGridCell>
+        </DataGrid>
     </Grid>
 </UserControl>

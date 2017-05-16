@@ -69,14 +69,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Enquetes\AjoutQuestion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Enquetes\AjoutReponse.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Enquetes\AjoutSequence.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,15 +81,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Quiz\AjoutQuestion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Quiz\AjoutQuizz.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Quiz\AjoutReponse.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,12 +97,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="Pages\Enquetes\AjoutQuestion.xaml.cs">
-      <DependentUpon>AjoutQuestion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Enquetes\AjoutReponse.xaml.cs">
-      <DependentUpon>AjoutReponse.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Enquetes\AjoutSequence.xaml.cs">
       <DependentUpon>AjoutSequence.xaml</DependentUpon>
     </Compile>
@@ -128,14 +106,8 @@
     <Compile Include="Pages\Enquetes\ListeEnquete.xaml.cs">
       <DependentUpon>ListeEnquete.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Quiz\AjoutQuestion.xaml.cs">
-      <DependentUpon>AjoutQuestion.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Quiz\AjoutQuizz.xaml.cs">
       <DependentUpon>AjoutQuizz.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Quiz\AjoutReponse.xaml.cs">
-      <DependentUpon>AjoutReponse.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Quiz\ListeQuizz.xaml.cs">
       <DependentUpon>ListeQuizz.xaml</DependentUpon>
@@ -168,12 +140,6 @@
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Sondages\AjoutQuestion.xaml.cs">
-      <DependentUpon>AjoutQuestion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Sondages\AjoutReponse.xaml.cs">
-      <DependentUpon>AjoutReponse.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Sondages\AjoutSondage.xaml.cs">
       <DependentUpon>AjoutSondage.xaml</DependentUpon>
     </Compile>
@@ -184,14 +150,6 @@
       <DependentUpon>sondage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Page Include="Pages\Sondages\AjoutQuestion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Sondages\AjoutReponse.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Sondages\AjoutSondage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
