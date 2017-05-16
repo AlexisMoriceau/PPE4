@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace PPE.Pages.Enquetes
 {
     /// <summary>
-    /// Interaction logic for AjoutEnquete.xaml
+    /// Interaction logic for AjoutSequence.xaml
     /// </summary>
-    public partial class AjoutEnquete : UserControl
+    public partial class AjoutSequence : UserControl
     {
-        public AjoutEnquete()
+        public AjoutSequence()
         {
             InitializeComponent();
-        }
-
-        private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
-        {
-            textBox_Nom.Text = "";
         }
     }
 }
