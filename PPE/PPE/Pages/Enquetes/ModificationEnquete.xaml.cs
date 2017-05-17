@@ -24,5 +24,10 @@ namespace PPE.Pages.Enquetes
         {
             InitializeComponent();
         }
+
+        private void button_Modifier_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,6 +6,20 @@
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" Height="567.2" Width="1090.167" Background="White">
     <Grid Style="{StaticResource ContentRoot}">
-        
+        <Label x:Name="label_ChoixSequence" Content="Choisissez la séquence à modifier dans l'nequête que vous avez choisie" Margin="20,20,652.4,479.2"/>
+        <ListView x:Name="listView_Sequence" BorderBrush="Black" BorderThickness="1" Margin="85,49,88.4,196.2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nom de la séquence"/>
+                    <GridViewColumn Header="Modifier">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="button_Modifier" Click="button_Modifier_Click"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>
