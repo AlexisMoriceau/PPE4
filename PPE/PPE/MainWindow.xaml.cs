@@ -23,6 +23,7 @@ namespace PPE
     {
         public MainWindow()
         {
+
             InitializeComponent();
         }
     }
