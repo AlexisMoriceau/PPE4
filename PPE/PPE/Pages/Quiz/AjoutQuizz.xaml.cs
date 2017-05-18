@@ -34,6 +34,7 @@ namespace PPE.Pages.Quiz
         {
             var rep = new Test { test = Console.ReadLine() };
             dataGrid_Reponse.Items.Add(rep);
+            this.dataGrid_Reponse.Items.Refresh();
         }
     }
     public class Test

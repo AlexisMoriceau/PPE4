@@ -13,12 +13,6 @@
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         
-        <mui:LinkGroup DisplayName="Accueil">
-            <mui:LinkGroup.Links>
-                <mui:Link DisplayName=""/>
-            </mui:LinkGroup.Links>
-        </mui:LinkGroup>
-
         <mui:LinkGroup DisplayName="Enquêtes">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="" Source="/Pages/Enquetes/enquete.xaml"/>
