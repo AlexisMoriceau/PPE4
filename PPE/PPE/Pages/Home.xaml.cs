@@ -35,6 +35,7 @@ namespace PPE.Pages
             window.MenuLinkGroups.Remove(aremove2);
             window.MenuLinkGroups.Remove(aremove3);
             window.MenuLinkGroups.Remove(aremove4);
+            //
         }
 
         private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
