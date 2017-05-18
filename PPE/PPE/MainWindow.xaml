@@ -8,33 +8,9 @@
                   ResizeMode="NoResize" WindowState="Maximized">
     
     <mui:ModernWindow.MenuLinkGroups>
-        <mui:LinkGroup DisplayName="Connexion">
+        <mui:LinkGroup DisplayName="welcome">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="" Source="/Pages/Home.xaml" />
-            </mui:LinkGroup.Links>
-        </mui:LinkGroup>
-        
-        <mui:LinkGroup DisplayName="Accueil">
-            <mui:LinkGroup.Links>
-                <mui:Link DisplayName=""/>
-            </mui:LinkGroup.Links>
-        </mui:LinkGroup>
-
-        <mui:LinkGroup DisplayName="Enquêtes">
-            <mui:LinkGroup.Links>
-                <mui:Link DisplayName="" Source="/Pages/Enquetes/enquete.xaml"/>
-            </mui:LinkGroup.Links>
-        </mui:LinkGroup>
-
-        <mui:LinkGroup DisplayName="Sondages">
-            <mui:LinkGroup.Links>
-                <mui:Link DisplayName="" Source="/Pages/Sondages/sondage.xaml"/>
-            </mui:LinkGroup.Links>
-        </mui:LinkGroup>
-
-        <mui:LinkGroup DisplayName="Quizz">
-            <mui:LinkGroup.Links>
-                <mui:Link DisplayName="" Source="/Pages/Quiz/quiz.xaml"/>
+                <mui:Link DisplayName="home" Source="/Pages/Home.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         
