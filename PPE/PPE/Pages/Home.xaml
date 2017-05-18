@@ -9,8 +9,9 @@
         <ScrollViewer>
             <TextBlock Text="Veuillez vous connecter" />
         </ScrollViewer>
-        <TextBox x:Name="TextBox_Login" Text="Identifiant" Width="auto" Height="auto" GotFocus="TextBox_Login_GotFocus" Margin="369,300,359,375"/>
-        <Label x:Name="Label_Password" Content="Mot de passe : " Height="auto" Width="auto" Margin="253,345,588,330" RenderTransformOrigin="1.187,0.635"/>
+        <Label x:Name="label_Login" Content="Identifiant :" Margin="253,295,613,375"/>
+        <TextBox x:Name="TextBox_Login" Width="auto" Height="auto" Margin="369,300,359,375"/>
+        <Label x:Name="label_Password" Content="Mot de passe : " Height="auto" Width="auto" Margin="253,345,588,330" RenderTransformOrigin="1.187,0.635"/>
         <PasswordBox x:Name="PasswordBox" Width="auto" Height="auto" Margin="370,345,359,330"/>
         <Button x:Name="button_connect" Content="Connexion" Width="auto" Height="auto" Click="button_connect_Click" Margin="436,402,424,272"/>
     </Grid>
