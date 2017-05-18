@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="PPE.Pages.Enquetes.AjoutSequence"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" Height="567.2" Width="1090.167">
+    <Grid Style="{StaticResource ContentRoot}">
+        <Label x:Name="label_Question" Content="Saisissez votre question" Margin="67,97,853.4,405.2"/>
+        <TextBox x:Name="textBox_Question" Margin="223,97,271.4,405.2"/>
+        <Label x:Name="label_Reponse" Content="Saisir les réponses possibles à votre question"  Margin="67,176,743.4,323.2"/>
+        <DataGrid x:Name="dataGrid_Reponse" BorderBrush="Black" BorderThickness="1" Margin="332,176,162.4,72.2">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox x:Name="textBox_Reponse"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_Valider" Content="Valider" Margin="431,481,468.4,10.2"/>
+    </Grid>
+</UserControl>

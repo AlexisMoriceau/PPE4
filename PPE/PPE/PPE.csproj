@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PPE.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FirstFloor.ModernUI, Version=1.0.9.0, Culture=neutral, PublicKeyToken=bc9b0c37bf06c6a9, processorArchitecture=MSIL">
       <HintPath>..\packages\ModernUI.WPF.1.0.9\lib\net45\FirstFloor.ModernUI.dll</HintPath>
@@ -67,10 +70,80 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Enquetes\AjoutEnquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Enquetes\AjoutSequence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Enquetes\enquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Enquetes\ListeEnquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Enquetes\ModificationEnquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Enquetes\ModificationSequence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\AjoutQuizz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\ListeQuizz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\ModificationQuiz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\quiz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Settings\About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="Pages\Enquetes\AjoutEnquete.xaml.cs">
+      <DependentUpon>AjoutEnquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\AjoutSequence.xaml.cs">
+      <DependentUpon>AjoutSequence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\enquete.xaml.cs">
+      <DependentUpon>enquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\ListeEnquete.xaml.cs">
+      <DependentUpon>ListeEnquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\ModificationEnquete.xaml.cs">
+      <DependentUpon>ModificationEnquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\ModificationSequence.xaml.cs">
+      <DependentUpon>ModificationSequence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\AjoutQuizz.xaml.cs">
+      <DependentUpon>AjoutQuizz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\ListeQuizz.xaml.cs">
+      <DependentUpon>ListeQuizz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\ModificationQuiz.xaml.cs">
+      <DependentUpon>ModificationQuiz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\quiz.xaml.cs">
+      <DependentUpon>quiz.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Settings\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
@@ -96,13 +169,42 @@
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Sondages\AjoutSondage.xaml.cs">
+      <DependentUpon>AjoutSondage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sondages\ListeSondage.xaml.cs">
+      <DependentUpon>ListeSondage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sondages\ModificationSondage.xaml.cs">
+      <DependentUpon>ModificationSondage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sondages\sondage.xaml.cs">
+      <DependentUpon>sondage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="Pages\Sondages\AjoutSondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sondages\ListeSondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sondages\ModificationSondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sondages\sondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

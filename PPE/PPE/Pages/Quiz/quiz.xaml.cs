@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PPE.Pages
+namespace PPE.Pages.Quiz
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for quiz.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class quiz : UserControl
     {
-        public Home()
+        public quiz()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox_Login.Text = "";
-        }
-
-        private void button_connect_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

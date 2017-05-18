@@ -13,26 +13,31 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PPE.Pages
+namespace PPE.Pages.Quiz
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for AjoutQuizz.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class AjoutQuizz : UserControl
     {
-        public Home()
+        public AjoutQuizz()
         {
             InitializeComponent();
         }
 
-        private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
+        private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Login.Text = "";
+            textBox_Nom.Text = "";
         }
 
-        private void button_connect_Click(object sender, RoutedEventArgs e)
+        private void button_AddRow_Click(object sender, RoutedEventArgs e)
         {
-
+            var rep = new Test { test = Console.ReadLine() };
+            dataGrid_Reponse.Items.Add(rep);
         }
+    }
+    public class Test
+    {
+        public string test { get; set; }
     }
 }

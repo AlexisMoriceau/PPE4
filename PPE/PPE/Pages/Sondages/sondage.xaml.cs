@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PPE.Pages
+namespace PPE.Pages.Sondages
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for sondage.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class sondage : UserControl
     {
-        public Home()
+        public sondage()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox_Login.Text = "";
-        }
-
-        private void button_connect_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

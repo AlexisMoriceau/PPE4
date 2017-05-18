@@ -13,24 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PPE.Pages
+namespace PPE.Pages.Quiz
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for ListeQuizz.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class ListeQuizz : UserControl
     {
-        public Home()
+        public ListeQuizz()
         {
             InitializeComponent();
         }
 
-        private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
+        private void button_modify_Click(object sender, RoutedEventArgs e)
         {
-            TextBox_Login.Text = "";
+
         }
 
-        private void button_connect_Click(object sender, RoutedEventArgs e)
+        private void button_delete_Click(object sender, RoutedEventArgs e)
         {
 
         }

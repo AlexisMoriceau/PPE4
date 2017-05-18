@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PPE.Pages
+namespace PPE.Pages.Enquetes
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for enquete.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class enquete : UserControl
     {
-        public Home()
+        public enquete()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox_Login.Text = "";
-        }
-
-        private void button_connect_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
