@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-             mc:Ignorable="d" Height="567.2" Width="1090.167" Background="White">
+             mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
         <Label x:Name="label_ChoixSequence" Content="Choisissez la séquence à modifier dans l'nequête que vous avez choisie" Margin="20,20,652.4,479.2"/>
         <ListView x:Name="listView_Sequence" BorderBrush="Black" BorderThickness="1" Margin="85,49,88.4,196.2">
@@ -21,5 +21,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="button_Valider" Content="Valider" Margin="468,398,455.4,91.2"/>
     </Grid>
 </UserControl>

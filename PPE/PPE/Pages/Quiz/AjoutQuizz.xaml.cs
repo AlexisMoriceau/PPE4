@@ -29,5 +29,15 @@ namespace PPE.Pages.Quiz
         {
             textBox_Nom.Text = "";
         }
+
+        private void button_AddRow_Click(object sender, RoutedEventArgs e)
+        {
+            var rep = new Test { test = Console.ReadLine() };
+            dataGrid_Reponse.Items.Add(rep);
+        }
+    }
+    public class Test
+    {
+        public string test { get; set; }
     }
 }

@@ -31,5 +31,6 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="button_Valider" Content="Valider" Margin="438,446,461.4,45.2"/>
     </Grid>
 </UserControl>

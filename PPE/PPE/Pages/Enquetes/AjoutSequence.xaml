@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-             mc:Ignorable="d" Background="#FFF3EEEE" Height="567.2" Width="1090.167">
+             mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
         <Label x:Name="label_Question" Content="Saisissez votre question" Margin="67,97,853.4,405.2"/>
         <TextBox x:Name="textBox_Question" Margin="223,97,271.4,405.2"/>
@@ -20,5 +20,6 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="button_Valider" Content="Valider" Margin="431,481,468.4,10.2"/>
     </Grid>
 </UserControl>

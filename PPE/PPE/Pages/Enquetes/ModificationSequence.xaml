@@ -4,37 +4,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-             mc:Ignorable="d" Height="567.2" Width="1090.167" Background="White">
+             mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
         <Label x:Name="label_ChoixQuestion" Content="Choisissez la question à modifier pour la séquence choisi dans la liste ci-dessous" Margin="20,20,600.4,480.2"/>
         <ListView x:Name="listView_Question" Margin="20,48,132.4,314.2" BorderBrush="Black" BorderThickness="1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Intitulé de la question"/>
-                    <GridViewColumn Header="Modifier">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button x:Name="button_ModfierQuestion" Click="button_ModfierQuestion_Click" Content="Edit"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label x:Name="label_ChoixReponse" Content="Choisissez la réponse que à modifier dans la liste ci-dessous" Margin="20,236,555.4,260.2"/>
+        <TextBox x:Name="textBox_ModifQuestion" Margin="20,217,132.4,278.2"/>
+        <Button x:Name="button_ValiderQuestion" Content="Modifier" Margin="943,217,10.4,278.2"/>
+        <Label x:Name="label_ChoixReponse" Content="Choisissez la réponse que à modifier dans la liste ci-dessous" Margin="20,250,555.4,246.2"/>
         <ListView x:Name="listView_Reponse" BorderBrush="Black" BorderThickness="1" Margin="20,282,132.4,80.2">
-            <ListView.View>
-                <GridView>
+                <ListView.View>
+                    <GridView>
                     <GridViewColumn Header="Intitulé de la réponse"/>
-                    <GridViewColumn Header="Modifier">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button x:Name="button_ModifierReponse" Click="button_ModifierReponse_Click" Content="Edit"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
+        <TextBox x:Name="textBox_ModifReponse" Margin="20,448,132.4,47.2"/>
+        <Button x:Name="button_ValiderReponse" Content="Modifier" Margin="943,448,10.4,47.2"/>
+        <Button x:Name="button_Valider" Content="Valider" Margin="407,485,449.4,10.2"/>
     </Grid>
 </UserControl>

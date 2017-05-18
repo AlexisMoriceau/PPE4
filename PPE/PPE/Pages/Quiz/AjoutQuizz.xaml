@@ -15,14 +15,11 @@
         <Label x:Name="label_Question" Margin="68,160,823.4,339.2" Content="Saisissez votre question :"/>
         <TextBox x:Name="textBox_Question" Margin="217,160,222.4,339.2"/>
         <Label x:Name="label_Reponse" Margin="75,189,852.4,310.2" Content="Saisissez vos réponses :"/>
-        <DataGrid x:Name="dataGrid_Reponse" Margin="217,189,222.4,118.2" BorderBrush="Black" BorderThickness="1">
-            <DataGridCell>
-                <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="1">
-                        <TextBox x:Name="textBox_Reponse" FontSize="8" Text=""/>
-                    </Border>
-                </DataTemplate>
-            </DataGridCell>
+        <DataGrid x:Name="dataGrid_Reponse" Margin="217,189,222.4,118.2" BorderBrush="Black" BorderThickness="1" AutoGenerateColumns="True">
+            <DataGridTextColumn Binding="{Binding Path=Test}">
+            </DataGridTextColumn>
         </DataGrid>
+        <Button x:Name="button_AddRow" Content="Ajouter une ligne" Click="button_AddRow_Click" Margin="841,226,59.4,270.2"/>
+        <Button x:Name="button_Valider" Content="Valider" Margin="438,446,461.4,45.2"/>
     </Grid>
 </UserControl>
