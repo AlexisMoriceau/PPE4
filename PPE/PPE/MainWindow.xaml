@@ -7,9 +7,14 @@
         ContentSource="/Pages/Home.xaml">
 
     <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Connexion">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Veuillez vous connecter" Source="/Pages/Home.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
         <mui:LinkGroup DisplayName="welcome">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="/Pages/Home.xaml" />
+                
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
