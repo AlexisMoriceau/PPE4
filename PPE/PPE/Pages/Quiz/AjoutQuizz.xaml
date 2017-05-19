@@ -9,9 +9,9 @@
         <Label x:Name="label_Quizz" Margin="0,0,717.4,505.2" Content="Remplissez les différents champs puis valider votre quizz"/>
         <TextBox x:Name="textBox_Nom" Text="Saisir le Nom de votre quizz" Margin="68,39,779.4,460.2" GotFocus="textBox_Nom_GotFocus"/>
         <Label x:Name="label_Theme" Margin="630,39,326.4,460.2" Content="Choix du thème :" />
-        <ComboBox x:Name="comboBox_Theme" Margin="752,39,60.4,460.2"/>
+        <ComboBox x:Name="comboBox_Theme" Margin="752,39,60.4,460.2" DisplayMemberPath="Intutile" SelectionChanged="comboBox_Theme_SelectionChanged"/>
         <Label x:Name="label_SousTheme" Margin="601,76,326.4,426.2" Content="Choix du sous-thème :"/>
-        <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2"/>
+        <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2" DisplayMemberPath="Intutile"/>
         <Label x:Name="label_Question" Margin="68,160,823.4,339.2" Content="Saisissez votre question :"/>
         <TextBox x:Name="textBox_Question" Margin="217,160,222.4,339.2"/>
         <Label x:Name="label_Reponse" Margin="75,189,852.4,310.2" Content="Saisissez vos réponses :"/>

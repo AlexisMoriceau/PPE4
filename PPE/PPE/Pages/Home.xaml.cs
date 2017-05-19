@@ -23,7 +23,6 @@ namespace PPE.Pages
     {
         public ModernWindow window = App.Current.MainWindow as ModernWindow;
         public FirstFloor.ModernUI.Presentation.LinkGroup aremove0 = (App.Current.MainWindow as ModernWindow).MenuLinkGroups.ElementAt(0);
-
         public FirstFloor.ModernUI.Presentation.LinkGroup aremove1 = (App.Current.MainWindow as ModernWindow).MenuLinkGroups.ElementAt(1);
         public FirstFloor.ModernUI.Presentation.LinkGroup aremove2 = (App.Current.MainWindow as ModernWindow).MenuLinkGroups.ElementAt(2);
         public FirstFloor.ModernUI.Presentation.LinkGroup aremove3 = (App.Current.MainWindow as ModernWindow).MenuLinkGroups.ElementAt(3);
@@ -31,10 +30,10 @@ namespace PPE.Pages
         public Home()
         {
             InitializeComponent();
-            window.MenuLinkGroups.Remove(aremove1);
+         /*   window.MenuLinkGroups.Remove(aremove1);
             window.MenuLinkGroups.Remove(aremove2);
             window.MenuLinkGroups.Remove(aremove3);
-            window.MenuLinkGroups.Remove(aremove4);
+            window.MenuLinkGroups.Remove(aremove4); */
             //
         }
 
@@ -57,7 +56,7 @@ namespace PPE.Pages
             }
             else
             {
-                MessageBox.Show("Ouste");
+                MessageBox.Show("Utilisateur inconnu");
             }
 
 

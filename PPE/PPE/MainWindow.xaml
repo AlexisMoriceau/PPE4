@@ -30,7 +30,8 @@
                 <mui:Link DisplayName="" Source="/Pages/Quiz/quiz.xaml"/>
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
-        
+
+
         <mui:LinkGroup DisplayName="Paramètres" GroupKey="settingss">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="" Source="/Pages/SettingsPage.xaml" />

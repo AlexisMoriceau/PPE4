@@ -23,6 +23,7 @@ namespace PPE.Pages.Quiz
         public AjoutQuizz()
         {
             InitializeComponent();
+            comboBox_Theme.ItemsSource = Controller.ThemeDAO.List(); 
         }
 
         private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
@@ -35,6 +36,11 @@ namespace PPE.Pages.Quiz
             var rep = new Test { test = Console.ReadLine() };
             dataGrid_Reponse.Items.Add(rep);
             this.dataGrid_Reponse.Items.Refresh();
+        }
+
+        private void comboBox_Theme_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            comboBox_SousTheme.ItemsSource = Controller.ThemeDAO.ssTheme(comboBox_Theme.SelectedItem as theme);
         }
     }
     public class Test
