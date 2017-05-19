@@ -21,6 +21,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="button_Valider" Content="Valider" Margin="468,398,455.4,91.2"/>
+        <Button x:Name="button_Valider" Content="Valider" Margin="468,398,455.4,91.2" Click="button_Valider_Click"/>
     </Grid>
 </UserControl>

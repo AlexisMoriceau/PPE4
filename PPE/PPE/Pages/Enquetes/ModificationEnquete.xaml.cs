@@ -29,5 +29,10 @@ namespace PPE.Pages.Enquetes
         {
 
         }
+
+        private void button_Valider_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

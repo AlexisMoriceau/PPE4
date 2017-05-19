@@ -29,5 +29,15 @@ namespace PPE.Pages.Enquetes
         {
             textBox_Nom.Text = "";
         }
+
+        private void button_AjoutSequence_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Valider_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

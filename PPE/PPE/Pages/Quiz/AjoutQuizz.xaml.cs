@@ -30,15 +30,14 @@ namespace PPE.Pages.Quiz
             textBox_Nom.Text = "";
         }
 
-        private void button_AddRow_Click(object sender, RoutedEventArgs e)
+        private void button_AjoutReponse_Click(object sender, RoutedEventArgs e)
         {
-            var rep = new Test { test = Console.ReadLine() };
-            dataGrid_Reponse.Items.Add(rep);
-            this.dataGrid_Reponse.Items.Refresh();
+
         }
-    }
-    public class Test
-    {
-        public string test { get; set; }
+
+        private void button_AjoutQuestion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

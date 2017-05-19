@@ -6,20 +6,14 @@
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
-        <Label x:Name="label_Question" Content="Saisissez votre question" Margin="67,97,853.4,405.2"/>
-        <TextBox x:Name="textBox_Question" Margin="223,97,271.4,405.2"/>
-        <Label x:Name="label_Reponse" Content="Saisir les réponses possibles à votre question"  Margin="67,176,743.4,323.2"/>
-        <DataGrid x:Name="dataGrid_Reponse" BorderBrush="Black" BorderThickness="1" Margin="332,176,162.4,72.2">
-            <DataGrid.Columns>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBox x:Name="textBox_Reponse"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+        <ListView x:Name="listView_Question" Margin="73,42,278.4,326.2" BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="label_Question" Content="Saisissez votre question" Margin="78,202,842.4,290.2"/>
+        <TextBox x:Name="textBox_Question" Margin="216,202,278.4,290.2"/>
+        <Button x:Name="button_AjoutQuestion" Margin="813,202,59.4,290.2" Content="Ajouter" Click="button_AjoutQuestion_Click"/>
+        <ListView x:Name="listView_Reponse" Margin="73,262,278.4,106.2" BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="label_Reponse" Content="Saisissez votre réponse :" Margin="78,422,847.4,70.2"/>
+        <TextBox x:Name="textBox_Reponse" Margin="216,422,278.4,70.2"/>
+        <Button x:Name="button_AjoutReponse" Content="Ajouter" Margin="813,422,59.4,70.2" Click="button_AjoutReponse_Click"/>
         <Button x:Name="button_Valider" Content="Valider" Margin="431,481,468.4,10.2"/>
     </Grid>
 </UserControl>

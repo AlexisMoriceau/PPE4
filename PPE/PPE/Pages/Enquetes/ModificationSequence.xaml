@@ -15,7 +15,7 @@
             </ListView.View>
         </ListView>
         <TextBox x:Name="textBox_ModifQuestion" Margin="20,217,132.4,278.2"/>
-        <Button x:Name="button_ValiderQuestion" Content="Modifier" Margin="943,217,10.4,278.2"/>
+        <Button x:Name="button_ValiderQuestion" Content="Modifier" Margin="943,217,10.4,278.2" Click="button_ValiderQuestion_Click"/>
         <Label x:Name="label_ChoixReponse" Content="Choisissez la réponse que à modifier dans la liste ci-dessous" Margin="20,250,555.4,246.2"/>
         <ListView x:Name="listView_Reponse" BorderBrush="Black" BorderThickness="1" Margin="20,282,132.4,80.2">
                 <ListView.View>
@@ -25,7 +25,7 @@
             </ListView.View>
         </ListView>
         <TextBox x:Name="textBox_ModifReponse" Margin="20,448,132.4,47.2"/>
-        <Button x:Name="button_ValiderReponse" Content="Modifier" Margin="943,448,10.4,47.2"/>
-        <Button x:Name="button_Valider" Content="Valider" Margin="407,485,449.4,10.2"/>
+        <Button x:Name="button_ValiderReponse" Content="Modifier" Margin="943,448,10.4,47.2" Click="button_ValiderReponse_Click"/>
+        <Button x:Name="button_Valider" Content="Valider" Margin="407,485,449.4,10.2" Click="button_Valider_Click"/>
     </Grid>
 </UserControl>

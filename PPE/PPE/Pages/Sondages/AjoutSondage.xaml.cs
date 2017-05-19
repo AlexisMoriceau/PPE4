@@ -30,5 +30,20 @@ namespace PPE.Pages.Sondages
         {
             textBox_Nom.Text = "";
         }
+
+        private void button_AjoutReponse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Valider_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_AjoutQuestion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
