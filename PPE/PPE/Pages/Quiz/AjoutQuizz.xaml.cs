@@ -23,6 +23,7 @@ namespace PPE.Pages.Quiz
         public AjoutQuizz()
         {
             InitializeComponent();
+            comboBox_Theme.ItemsSource = Controller.ThemeDAO.List(); 
         }
 
         private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
@@ -34,10 +35,9 @@ namespace PPE.Pages.Quiz
         {
 
         }
-
-        private void button_AjoutQuestion_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+    }
+    public class Test
+    {
+        public string test { get; set; }
     }
 }
