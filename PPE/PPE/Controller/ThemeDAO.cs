@@ -18,6 +18,11 @@ namespace PPE.Controller
             return ListeTheme;
         }
 
+        /// <summary>
+        /// retourne les sous themes
+        /// </summary>
+        /// <param name="letheme">Le theme parent</param>
+        /// <returns>Retourne une liste de sous themes</returns>
         public static List<theme> ssTheme(theme letheme)
         {
             List<theme> ListessTheme = db.themes.ToList();
