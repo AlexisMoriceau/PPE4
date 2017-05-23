@@ -31,16 +31,9 @@ namespace PPE.Pages.Quiz
             textBox_Nom.Text = "";
         }
 
-        private void button_AddRow_Click(object sender, RoutedEventArgs e)
+        private void button_AjoutReponse_Click(object sender, RoutedEventArgs e)
         {
-            var rep = new Test { test = Console.ReadLine() };
-            dataGrid_Reponse.Items.Add(rep);
-            this.dataGrid_Reponse.Items.Refresh();
-        }
 
-        private void comboBox_Theme_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            comboBox_SousTheme.ItemsSource = Controller.ThemeDAO.ssTheme(comboBox_Theme.SelectedItem as theme);
         }
     }
     public class Test

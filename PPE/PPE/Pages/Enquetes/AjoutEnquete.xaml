@@ -13,7 +13,7 @@
         <Label x:Name="label_SousTheme" Margin="601,76,326.4,426.2" Content="Choix du sous-thème :"/>
         <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2"/>
         <Label x:Name="label_Sequence" Margin="68,160,763.4,339.2" Content="Saisissez vos séquences et configurer les"/>
-        <DataGrid x:Name="dataGrid_Sequence" Margin="68,202,345.4,105.2" BorderBrush="Black" BorderThickness="1">
+        <DataGrid x:Name="dataGrid_Sequence" Margin="68,189,326.4,152.2" BorderBrush="Black" BorderThickness="1">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Nom de la séquence">
                     <DataGridTemplateColumn.CellTemplate>
@@ -31,6 +31,9 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button_Valider" Content="Valider" Margin="438,446,461.4,45.2"/>
+        <Label x:Name="label_AjoutSequence" Content="Saisir le nom d'une séquence :" Margin="68,390,820.4,109.2"/>
+        <TextBox x:Name="textBox_Sequence" Margin="262,390,326.4,109.2"/>
+        <Button x:Name="button_AjoutSequence" Margin="752,390,198.4,109.2" Content="Ajouter" Click="button_AjoutSequence_Click"/>
+        <Button x:Name="button_Valider" Content="Valider" Margin="438,446,461.4,45.2" Click="button_Valider_Click"/>
     </Grid>
 </UserControl>

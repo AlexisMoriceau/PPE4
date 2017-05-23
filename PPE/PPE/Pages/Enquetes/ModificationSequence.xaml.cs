@@ -25,12 +25,17 @@ namespace PPE.Pages.Enquetes
             InitializeComponent();
         }
 
-        private void button_ModfierQuestion_Click(object sender, RoutedEventArgs e)
+        private void button_ValiderQuestion_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void button_ModifierReponse_Click(object sender, RoutedEventArgs e)
+        private void button_ValiderReponse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
 
         }

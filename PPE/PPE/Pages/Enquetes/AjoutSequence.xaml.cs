@@ -24,5 +24,15 @@ namespace PPE.Pages.Enquetes
         {
             InitializeComponent();
         }
+
+        private void button_AjoutQuestion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_AjoutReponse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

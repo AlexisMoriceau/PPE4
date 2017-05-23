@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PPE.Pages.Sondages
+namespace PPE.Pages.Thème
 {
     /// <summary>
-    /// Interaction logic for ModificationSondage.xaml
+    /// Interaction logic for AjoutTheme.xaml
     /// </summary>
-    public partial class ModificationSondage : UserControl
+    public partial class AjoutTheme : UserControl
     {
-        public ModificationSondage()
+        public AjoutTheme()
         {
             InitializeComponent();
-        }
-
-        private void button_ValiderQuestion_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_ValiderReponse_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
