@@ -61,7 +61,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -127,6 +127,15 @@
     <Compile Include="commentaire__sondage.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controller\CadeauQuizzDao.cs" />
+    <Compile Include="Controller\CommentaireQuizzDAO.cs" />
+    <Compile Include="Controller\CommentaireSondageDAO.cs" />
+    <Compile Include="Controller\QuestionQuizzDAO.cs" />
+    <Compile Include="Controller\QuestionSondageDAO.cs" />
+    <Compile Include="Controller\QuizzDAO.cs" />
+    <Compile Include="Controller\ReponseQuizzDAO.cs" />
+    <Compile Include="Controller\ReponseSondageDAO.cs" />
+    <Compile Include="Controller\SondageDAO.cs" />
     <Compile Include="Controller\ThemeDAO.cs" />
     <Compile Include="enquete.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -135,6 +144,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Enquetes\CommentaireEnquete.xaml.cs">
+      <DependentUpon>CommentaireEnquete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quiz\CommentaireQuizz.xaml.cs">
+      <DependentUpon>CommentaireQuizz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sondages\CommentaireSondage.xaml.cs">
+      <DependentUpon>CommentaireSondage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Thème\AjoutTheme.xaml.cs">
       <DependentUpon>AjoutTheme.xaml</DependentUpon>
@@ -200,6 +218,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Enquetes\CommentaireEnquete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Enquetes\enquete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -217,6 +239,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Quiz\AjoutQuizz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quiz\CommentaireQuizz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -315,6 +341,10 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Page Include="Pages\Sondages\AjoutSondage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sondages\CommentaireSondage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

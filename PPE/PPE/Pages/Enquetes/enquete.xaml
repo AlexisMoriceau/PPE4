@@ -13,6 +13,7 @@
                 <!-- TODO: set @Source -->
                 <mui:Link DisplayName="Liste des enquêtes" Source="/Pages/Enquetes/ListeEnquete.xaml"/>
                 <mui:Link DisplayName="Ajouter une enquête" Source="/Pages/Enquetes/AjoutEnquete.xaml"/>
+                <mui:Link DisplayName="Voir les commentaires" Source="/Pages/Enquetes/CommentaireEnquete.xaml"/> 
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

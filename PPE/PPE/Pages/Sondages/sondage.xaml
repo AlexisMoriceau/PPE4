@@ -13,6 +13,7 @@
                 <!-- TODO: set @Source -->
                 <mui:Link DisplayName="Liste des sondages" Source="/Pages/Sondages/ListeSondage.xaml"/>
                 <mui:Link DisplayName="Ajouter un sondage" Source="/Pages/Sondages/AjoutSondage.xaml"/>
+                <mui:Link DisplayName="Voir les Commentaires" Source="/Pages/Sondages/CommentaireSondage.xaml"/>
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

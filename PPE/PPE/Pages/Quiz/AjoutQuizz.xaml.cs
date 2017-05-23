@@ -35,6 +35,11 @@ namespace PPE.Pages.Quiz
         {
 
         }
+
+        private void button_AjoutQuestion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     public class Test
     {
