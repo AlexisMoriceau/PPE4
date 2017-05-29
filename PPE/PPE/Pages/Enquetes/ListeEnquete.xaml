@@ -11,9 +11,9 @@
             <ListView x:Name="listView_Enquete" Width="956" Height="600" BorderBrush="Black" BorderThickness="1">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Nom" />
+                        <GridViewColumn Header="Nom"  DisplayMemberBinding="{Binding Intitule}"/>
                         <GridViewColumn Header="Thème"/>
-                        <GridViewColumn Header="Nombre de Séquence"/>
+                        <GridViewColumn Header="Nombre de Séquence" DisplayMemberBinding="{Binding sequences.Count}"/>
                         <GridViewColumn Header="Nombre de participant"/>
                         <GridViewColumn Header="Modifier">
                             <GridViewColumn.CellTemplate>

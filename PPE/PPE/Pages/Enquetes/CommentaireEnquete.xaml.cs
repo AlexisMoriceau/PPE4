@@ -23,6 +23,25 @@ namespace PPE.Pages.Enquetes
         public CommentaireEnquete()
         {
             InitializeComponent();
+            comboBox_ComEnquete.ItemsSource = Controller.EnqueteDAO.List();
+            
         }
+
+        private void comboBox_ComEnquete_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            listView_ComEnquete.ItemsSource = Controller.CommentaireEnqueteDAO.listeCommEnq(comboBox_ComEnquete.SelectedItem as PPE.enquete);
+            listView_ComEnquete.Items.Refresh();
+        }
+
+        private void ButtonSupprimer_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Controller.CommentaireEnqueteDAO.Delete((commentaire__enquete)btn.DataContext);
+            listView_ComEnquete.ItemsSource = Controller.CommentaireEnqueteDAO.listeCommEnq(comboBox_ComEnquete.SelectedItem as PPE.enquete);
+        }
+
+
+
     }
 }
