@@ -23,8 +23,68 @@ namespace PPE.Pages.Sondages
         public AjoutSondage()
         {
             InitializeComponent();
-
+            button_Ajouter.IsEnabled = false;
+            button_AjoutQuestion.IsEnabled = false;
+            button_AjoutReponse.IsEnabled = false;
+            button_Valider.IsEnabled = false;
+            comboBox_Theme.ItemsSource = Controller.ThemeDAO.List();
+            comboBox_SousTheme.ItemsSource = Controller.ThemeDAO.List();
         }
+        public PPE.sondage sondage22;
+        public static PPE4Entities db = new PPE4Entities();
+
+        public static List<question__sondage> Q;
+        public static List<reponse__sondage> R;
+
+        #region Fonction Enable
+        private void BoutonEnableA()
+        {
+            if (listView_Question.Items.Count == 1 || listView_Reponse.Items.Count > 0)
+            {
+                button_Ajouter.IsEnabled = false;
+            }
+            else
+            {
+                button_Ajouter.IsEnabled = true;
+            }
+        }
+
+        private void BoutonEnableQ()
+        {
+            if (Q == null)
+            {
+                button_AjoutQuestion.IsEnabled = false;
+            }
+            else
+            {
+                button_AjoutQuestion.IsEnabled = true;
+            }
+        }
+
+        private void BoutonEnableR()
+        {
+            if(R == null)
+            {
+                button_AjoutReponse.IsEnabled = false;
+            }
+            else
+            {
+                button_AjoutReponse.IsEnabled = true;
+            }
+        }
+
+        private void BoutonEnableV()
+        {
+            if( textBox_Nom.Text =="" || listView_Question.Items == null || listView_Reponse.Items == null || comboBox_Theme.Items == null)
+            {
+                button_Valider.IsEnabled = false;
+            }
+            else
+            {
+                button_Valider.IsEnabled = true;
+            }
+        }
+        #endregion
 
         private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -33,17 +93,62 @@ namespace PPE.Pages.Sondages
 
         private void button_AjoutReponse_Click(object sender, RoutedEventArgs e)
         {
-
+            var reponse = new reponse__sondage { Intitule = textBox_AjoutReponse.Text };
+            R.Add(reponse);
+            listView_Reponse.ItemsSource = (R);
         }
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
-
+            sondage22 = new PPE.sondage { Intitule = textBox_Nom.Text };
+            db.sondages.Add(sondage22);
+            textBox_Nom.Clear();
+            textBox_Question.Clear();
+            textBox_AjoutReponse.Clear();
+            listView_Question.Items.Clear();
+            listView_Reponse.Items.Clear();
+            MessageBox.Show("Votre sondage a été ajouté, il reste modifiable en cas d'erreur de saisie");
         }
 
         private void button_AjoutQuestion_Click(object sender, RoutedEventArgs e)
         {
-
+            var question = new question__sondage { Intitule = textBox_Question.Text };
+            Q.Add(question);
+            listView_Question.ItemsSource = (Q);
         }
+
+        private void button_Ajouter_Click(object sender, RoutedEventArgs e)
+        {
+            var question = new question__sondage { Intitule = listView_Question.Items.ToString() };
+            question.sondage = sondage22;
+            db.question__sondage.Add(question);
+            foreach (var item in R)
+            {
+                item.question__sondage = question;
+                db.reponse__sondage.Add(item);
+                textBox_AjoutReponse.Clear();
+            }
+        }
+
+        #region Enable
+        private void textBox_AjoutReponse_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BoutonEnableR();
+        }
+
+        private void textBox_Question_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BoutonEnableQ();
+        }
+
+        private void textBox_Nom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BoutonEnableV();
+        }
+        private void comboBox_Theme_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            BoutonEnableV();
+        }
+        #endregion
     }
 }
