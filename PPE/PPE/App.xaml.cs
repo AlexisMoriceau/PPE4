@@ -13,5 +13,17 @@ namespace PPE
     /// </summary>
     public partial class App : Application
     {
+        public PPE.enquete creationenquete = new enquete();
+        public sequence newsequence { get; set; }
+
+        public List<sequence> listeseq { get; set; }
+        
+
+        public question__sequence newquestion { get; set; }
+
+        public List<reponse__sequence> RQ { get; set; }
+
+        
+
     }
 }

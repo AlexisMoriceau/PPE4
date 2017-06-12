@@ -24,20 +24,33 @@ namespace PPE.Pages.Enquetes
         {
             InitializeComponent();
         }
-
-        private void button_ValiderQuestion_Click(object sender, RoutedEventArgs e)
+        public void button_ValiderQuestion_Click(object sender, RoutedEventArgs e)
         {
-
+            PPE.question__sequence QS = new question__sequence() { Intitule = textBox_ModifQuestion.Text };
+            (App.Current as App).newsequence.question__sequence.Add(QS);
+            listView_Question.Items.Add(QS);
+            listView_Question.Items.Refresh();
         }
 
-        private void button_ValiderReponse_Click(object sender, RoutedEventArgs e)
+        public void button_ValiderReponse_Click(object sender, RoutedEventArgs e)
         {
-
+            reponse__sequence RS = new reponse__sequence() { Intitule = textBox_ModifReponse.Text };
+            listView_Reponse.Items.Add(RS);
+            listView_Reponse.Items.Refresh();
         }
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
+            question__sequence laquestion = listView_Question.Items.GetItemAt(0) as question__sequence;
 
+
+            foreach (var item in listView_Reponse.Items)
+            {
+                laquestion.reponse__sequence.Add(item as reponse__sequence);
+            }
+
+            (App.Current as App).newsequence.question__sequence.Add(laquestion);
+            
         }
     }
 }
