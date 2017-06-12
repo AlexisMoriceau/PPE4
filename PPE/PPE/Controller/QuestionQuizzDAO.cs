@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PPE.Controller
 {
-    class QuestionQuizzDAO
+    public class QuestionQuizzDAO
     {
         public static PPE4Entities db = new PPE4Entities();
 

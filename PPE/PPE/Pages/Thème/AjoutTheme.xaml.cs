@@ -27,6 +27,8 @@ namespace PPE.Pages.Thème
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
+            theme newtheme = new theme { Intutile = textBox_NomTheme.Text };
+            Controller.ThemeDAO.addtheme(newtheme);
 
         }
     }

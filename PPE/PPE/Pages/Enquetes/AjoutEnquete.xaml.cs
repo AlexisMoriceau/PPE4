@@ -32,7 +32,7 @@ namespace PPE.Pages.Enquetes
 
         private void button_AjoutSequence_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)

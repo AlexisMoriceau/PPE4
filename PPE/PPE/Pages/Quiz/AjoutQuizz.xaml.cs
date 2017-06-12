@@ -24,6 +24,7 @@ namespace PPE.Pages.Quiz
         {
             InitializeComponent();
             comboBox_Theme.ItemsSource = Controller.ThemeDAO.List(); 
+            
         }
 
         private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)

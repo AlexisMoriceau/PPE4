@@ -44,6 +44,7 @@ namespace PPE.Pages
 
         private void button_connect_Click(object sender, RoutedEventArgs e)
         {
+            /*
             PPE4Entities db = new PPE4Entities();    
             if (db.Administrateurs.Any(x => x.Login == TextBox_Login.Text && x.Password == PasswordBox.Password))
             {
@@ -57,7 +58,7 @@ namespace PPE.Pages
             else
             {
                 MessageBox.Show("Utilisateur inconnu");
-            }
+            }*/
 
 
 

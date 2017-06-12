@@ -4,8 +4,8 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PPE4Model.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Administrateur">
+      <Schema Namespace="ppe4Model.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="administrateur">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -607,8 +607,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PPE4ModelStoreContainer">
-          <EntitySet Name="Administrateur" EntityType="Self.Administrateur" Schema="ppe4" store:Type="Tables" />
+        <EntityContainer Name="ppe4ModelStoreContainer">
+          <EntitySet Name="administrateur" EntityType="Self.administrateur" Schema="ppe4" store:Type="Tables" />
           <EntitySet Name="cadeau" EntityType="Self.cadeau" Schema="ppe4" store:Type="Tables" />
           <EntitySet Name="commentaire__enquete" EntityType="Self.commentaire__enquete" Schema="ppe4" store:Type="Tables" />
           <EntitySet Name="commentaire__quizz" EntityType="Self.commentaire__quizz" Schema="ppe4" store:Type="Tables" />
@@ -758,8 +758,8 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="PPE4Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Administrateur">
+      <Schema Namespace="ppe4Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="administrateur">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1218,7 +1218,7 @@
           <End Role="theme1" Type="Self.theme" Multiplicity="*" />
         </Association>
         <EntityContainer Name="PPE4Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Administrateurs" EntityType="Self.Administrateur" />
+          <EntitySet Name="administrateurs" EntityType="Self.administrateur" />
           <EntitySet Name="cadeaux" EntityType="Self.cadeau" />
           <EntitySet Name="commentaire__enquete" EntityType="Self.commentaire__enquete" />
           <EntitySet Name="commentaire__quizz" EntityType="Self.commentaire__quizz" />
@@ -1339,10 +1339,10 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PPE4ModelStoreContainer" CdmEntityContainer="PPE4Entities">
-          <EntitySetMapping Name="Administrateurs">
-            <EntityTypeMapping TypeName="PPE4Model.Administrateur">
-              <MappingFragment StoreEntitySet="Administrateur">
+        <EntityContainerMapping StorageEntityContainer="ppe4ModelStoreContainer" CdmEntityContainer="PPE4Entities">
+          <EntitySetMapping Name="administrateurs">
+            <EntityTypeMapping TypeName="ppe4Model.administrateur">
+              <MappingFragment StoreEntitySet="administrateur">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -1350,7 +1350,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="cadeaux">
-            <EntityTypeMapping TypeName="PPE4Model.cadeau">
+            <EntityTypeMapping TypeName="ppe4Model.cadeau">
               <MappingFragment StoreEntitySet="cadeau">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="quizz_id" ColumnName="quizz_id" />
@@ -1360,7 +1360,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="commentaire__enquete">
-            <EntityTypeMapping TypeName="PPE4Model.commentaire__enquete">
+            <EntityTypeMapping TypeName="ppe4Model.commentaire__enquete">
               <MappingFragment StoreEntitySet="commentaire__enquete">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
@@ -1371,7 +1371,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="commentaire__quizz">
-            <EntityTypeMapping TypeName="PPE4Model.commentaire__quizz">
+            <EntityTypeMapping TypeName="ppe4Model.commentaire__quizz">
               <MappingFragment StoreEntitySet="commentaire__quizz">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="quizz_id" ColumnName="quizz_id" />
@@ -1382,7 +1382,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="commentaire__sondage">
-            <EntityTypeMapping TypeName="PPE4Model.commentaire__sondage">
+            <EntityTypeMapping TypeName="ppe4Model.commentaire__sondage">
               <MappingFragment StoreEntitySet="commentaire__sondage">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="utilisateur_id" ColumnName="utilisateur_id" />
@@ -1393,7 +1393,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="enquetes">
-            <EntityTypeMapping TypeName="PPE4Model.enquete">
+            <EntityTypeMapping TypeName="ppe4Model.enquete">
               <MappingFragment StoreEntitySet="enquete">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Intitule" ColumnName="Intitule" />
@@ -1404,7 +1404,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="question__quizz">
-            <EntityTypeMapping TypeName="PPE4Model.question__quizz">
+            <EntityTypeMapping TypeName="ppe4Model.question__quizz">
               <MappingFragment StoreEntitySet="question__quizz">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Intitule" ColumnName="Intitule" />
@@ -1413,7 +1413,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="question__sequence">
-            <EntityTypeMapping TypeName="PPE4Model.question__sequence">
+            <EntityTypeMapping TypeName="ppe4Model.question__sequence">
               <MappingFragment StoreEntitySet="question__sequence">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="sequence_id" ColumnName="sequence_id" />
@@ -1422,7 +1422,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="question__sondage">
-            <EntityTypeMapping TypeName="PPE4Model.question__sondage">
+            <EntityTypeMapping TypeName="ppe4Model.question__sondage">
               <MappingFragment StoreEntitySet="question__sondage">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="sondage_id" ColumnName="sondage_id" />
@@ -1431,7 +1431,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="quizzs">
-            <EntityTypeMapping TypeName="PPE4Model.quizz">
+            <EntityTypeMapping TypeName="ppe4Model.quizz">
               <MappingFragment StoreEntitySet="quizz">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Intitule" ColumnName="Intitule" />
@@ -1439,7 +1439,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="quizz__complet">
-            <EntityTypeMapping TypeName="PPE4Model.quizz__complet">
+            <EntityTypeMapping TypeName="ppe4Model.quizz__complet">
               <MappingFragment StoreEntitySet="quizz__complet">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="utilisateur_id" ColumnName="utilisateur_id" />
@@ -1450,7 +1450,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="reponse__quizz">
-            <EntityTypeMapping TypeName="PPE4Model.reponse__quizz">
+            <EntityTypeMapping TypeName="ppe4Model.reponse__quizz">
               <MappingFragment StoreEntitySet="reponse__quizz">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Intitule" ColumnName="Intitule" />
@@ -1459,7 +1459,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="reponse__sequence">
-            <EntityTypeMapping TypeName="PPE4Model.reponse__sequence">
+            <EntityTypeMapping TypeName="ppe4Model.reponse__sequence">
               <MappingFragment StoreEntitySet="reponse__sequence">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="question_reponse_id" ColumnName="question_reponse_id" />
@@ -1468,7 +1468,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="reponse__sondage">
-            <EntityTypeMapping TypeName="PPE4Model.reponse__sondage">
+            <EntityTypeMapping TypeName="ppe4Model.reponse__sondage">
               <MappingFragment StoreEntitySet="reponse__sondage">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="question_reponse_id" ColumnName="question_reponse_id" />
@@ -1477,7 +1477,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sequences">
-            <EntityTypeMapping TypeName="PPE4Model.sequence">
+            <EntityTypeMapping TypeName="ppe4Model.sequence">
               <MappingFragment StoreEntitySet="sequence">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Intitule" ColumnName="Intitule" />
@@ -1486,7 +1486,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sondages">
-            <EntityTypeMapping TypeName="PPE4Model.sondage">
+            <EntityTypeMapping TypeName="ppe4Model.sondage">
               <MappingFragment StoreEntitySet="sondage">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Intitule" ColumnName="Intitule" />
@@ -1497,7 +1497,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sondage__complet">
-            <EntityTypeMapping TypeName="PPE4Model.sondage__complet">
+            <EntityTypeMapping TypeName="ppe4Model.sondage__complet">
               <MappingFragment StoreEntitySet="sondage__complet">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="utilisateur_id" ColumnName="utilisateur_id" />
@@ -1508,7 +1508,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="themes">
-            <EntityTypeMapping TypeName="PPE4Model.theme">
+            <EntityTypeMapping TypeName="ppe4Model.theme">
               <MappingFragment StoreEntitySet="theme">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Intutile" ColumnName="Intutile" />
@@ -1516,7 +1516,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="utilisateurs">
-            <EntityTypeMapping TypeName="PPE4Model.utilisateur">
+            <EntityTypeMapping TypeName="ppe4Model.utilisateur">
               <MappingFragment StoreEntitySet="utilisateur">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Nom" ColumnName="Nom" />
@@ -1529,7 +1529,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="equete_theme" TypeName="PPE4Model.equete_theme" StoreEntitySet="equete_theme">
+          <AssociationSetMapping Name="equete_theme" TypeName="ppe4Model.equete_theme" StoreEntitySet="equete_theme">
             <EndProperty Name="theme">
               <ScalarProperty Name="id" ColumnName="theme_id" />
             </EndProperty>
@@ -1537,7 +1537,7 @@
               <ScalarProperty Name="id" ColumnName="enquete_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="reponse_sequence_utilisateur" TypeName="PPE4Model.reponse_sequence_utilisateur" StoreEntitySet="reponse_sequence_utilisateur">
+          <AssociationSetMapping Name="reponse_sequence_utilisateur" TypeName="ppe4Model.reponse_sequence_utilisateur" StoreEntitySet="reponse_sequence_utilisateur">
             <EndProperty Name="reponse__sequence">
               <ScalarProperty Name="id" ColumnName="reponse_sequence_id" />
             </EndProperty>
@@ -1545,7 +1545,7 @@
               <ScalarProperty Name="id" ColumnName="utilisateur_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="reponse_utilisateur" TypeName="PPE4Model.reponse_utilisateur" StoreEntitySet="reponse_utilisateur">
+          <AssociationSetMapping Name="reponse_utilisateur" TypeName="ppe4Model.reponse_utilisateur" StoreEntitySet="reponse_utilisateur">
             <EndProperty Name="reponse__sondage">
               <ScalarProperty Name="id" ColumnName="reponse_sondage_id" />
             </EndProperty>
@@ -1553,7 +1553,7 @@
               <ScalarProperty Name="id" ColumnName="utilisateur_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="reponses_quizz" TypeName="PPE4Model.reponses_quizz" StoreEntitySet="reponses_quizz">
+          <AssociationSetMapping Name="reponses_quizz" TypeName="ppe4Model.reponses_quizz" StoreEntitySet="reponses_quizz">
             <EndProperty Name="reponse__quizz">
               <ScalarProperty Name="id" ColumnName="reponse_quizz_id" />
             </EndProperty>
@@ -1561,7 +1561,7 @@
               <ScalarProperty Name="id" ColumnName="utilisateur_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="sondage_theme" TypeName="PPE4Model.sondage_theme" StoreEntitySet="sondage_theme">
+          <AssociationSetMapping Name="sondage_theme" TypeName="ppe4Model.sondage_theme" StoreEntitySet="sondage_theme">
             <EndProperty Name="theme">
               <ScalarProperty Name="id" ColumnName="theme_id" />
             </EndProperty>
@@ -1569,7 +1569,7 @@
               <ScalarProperty Name="id" ColumnName="sondage_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="theme_theme" TypeName="PPE4Model.theme_theme" StoreEntitySet="theme_theme">
+          <AssociationSetMapping Name="theme_theme" TypeName="ppe4Model.theme_theme" StoreEntitySet="theme_theme">
             <EndProperty Name="theme">
               <ScalarProperty Name="id" ColumnName="theme_source" />
             </EndProperty>
@@ -1593,7 +1593,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
       </DesignerInfoPropertySet>
     </Options>

@@ -12,7 +12,7 @@
         <ComboBox x:Name="comboBox_Theme" Margin="752,39,60.4,460.2"/>
         <Label x:Name="label_SousTheme" Margin="601,76,326.4,426.2" Content="Choix du sous-thème :"/>
         <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2"/>
-        <Label x:Name="label_Sequence" Margin="68,160,763.4,339.2" Content="Saisissez vos séquences et configurer les"/>
+        <Label x:Name="label_Sequence" Margin="68,160,741,339" Content="Saisissez vos séquences et configurer les"/>
         <DataGrid x:Name="dataGrid_Sequence" Margin="68,189,326.4,152.2" BorderBrush="Black" BorderThickness="1">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Nom de la séquence">

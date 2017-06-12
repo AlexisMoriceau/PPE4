@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PPE.Controller
 {
     
-    class ThemeDAO
+    public class ThemeDAO
     {
         public static PPE4Entities db = new PPE4Entities();
 
@@ -28,6 +28,12 @@ namespace PPE.Controller
             List<theme> ListessTheme = db.themes.ToList();
             var result = db.themes.Include(x => x.themes).Single(x => x.id == letheme.id);           
             return result.theme1.ToList();
+        }
+
+        public static void addtheme(theme letheme)
+        {
+            db.themes.Add(letheme);
+            db.SaveChanges();
         }
 
 

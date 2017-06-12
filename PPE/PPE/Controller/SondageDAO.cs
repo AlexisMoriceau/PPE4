@@ -22,26 +22,23 @@ namespace PPE.Controller
             return Sondage;
         }
 
-        public static string Modify (sondage Sondage)
+        public static void Modify (sondage Sondage)
         {
             db.sondages.Attach(Sondage);
             db.Entry(Sondage).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-            return "le sondage a été modifié correctement";
         }
 
-        public static string Delete (sondage Sondage)
+        public static void Delete (sondage Sondage)
         {
             db.sondages.Attach(Sondage);
             db.sondages.Remove(Sondage);
-            return "Le sondage a bien été supprimé";
         }
 
-        public static string Add (sondage Sondage)
+        public static void Add (sondage Sondage)
         {
             db.sondages.Add(Sondage);
             db.SaveChanges();
-            return "Le sondage a été ajouté correctement";
         }
     }
 }
