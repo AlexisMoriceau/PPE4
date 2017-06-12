@@ -20,10 +20,11 @@ namespace PPE.Pages.Enquetes
     /// </summary>
     public partial class AjoutEnquete : UserControl
     {
-        public static List<sequence> seq = new List<sequence>();
         public AjoutEnquete()
         {
             InitializeComponent();
+            combo_theme.ItemsSource = Controller.ThemeDAO.List();
+            
         }
 
       private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
@@ -33,37 +34,43 @@ namespace PPE.Pages.Enquetes
 
         private void button_AjoutSequence_Click(object sender, RoutedEventArgs e)
         {
-            sequence newseq = new sequence { Intitule = textBox_Sequence.Text };
-            seq.Add(newseq);
-            listView_Enquete.Items.Refresh();
-            listView_Enquete.ItemsSource = seq;
-            isenable();
 
         }
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
+            PPE.enquete lol = new PPE.enquete();
+            lol.sequences = (App.Current as App).listeseq;
+   
 
         }
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
         private void button_modify_Click(object sender, RoutedEventArgs e)
         {
+         //   Button btn = (Button)sender;
+         //   (App.Current as App).newsequence = (sequence)btn.DataContext;
 
         }
 
+
         private void isenable()
         {
-            if (seq.Count != 0 || textBox_Nom.Text != "")
+            /*if (globseq.Count != 0 || textBox_Nom.Text != "")
             {
              //   button_Valider.IsEnabled = true;
-            }
+            }*/
         }
         private void textBox_Nom_TextChanged(object sender, TextChangedEventArgs e)
         {
            // isenable();
+        }
+
+        private void comboBox_SousTheme_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            comboBox_SousTheme.ItemsSource = Controller.ThemeDAO.ssTheme(combo_theme.SelectedItem as PPE.theme);
         }
     }
 }

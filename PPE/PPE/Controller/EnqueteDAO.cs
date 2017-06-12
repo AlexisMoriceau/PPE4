@@ -67,5 +67,15 @@ namespace PPE.Controller
             return db.sequences.Where(x => x.enquete_id == enquete.id).ToList();
         }
 
+        public static void AddSequence(enquete enquete, List<sequence> lessequence)
+        {
+            db.enquetes.Add(enquete);
+            foreach (var item in lessequence)
+            {
+                enquete.sequences.Add(item);
+            }
+            db.SaveChanges();
+        }
+
     }
 }
