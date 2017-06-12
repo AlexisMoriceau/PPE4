@@ -23,6 +23,7 @@ namespace PPE.Pages.Quiz
         public ListeQuizz()
         {
             InitializeComponent();
+         
         }
 
         private void button_modify_Click(object sender, RoutedEventArgs e)

@@ -6,16 +6,16 @@
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
-        <Label x:Name="label_Enquete" Content="Choisissez le enquete pour lequel vous voulez voir les commentaires :" Margin="20,20,651.4,476.2"/>
-        <ComboBox x:Name="comboBox_ComEnquete" Margin="437,20,245.4,476.2"/>
+        <Label x:Name="label_Enquete" Content="Enquete :" Margin="280,20,726,476"/>
+        <ComboBox x:Name="comboBox_ComEnquete" Margin="337,20,345,476" DisplayMemberPath="Intitule" SelectionChanged="comboBox_ComEnquete_SelectionChanged"/>
         <ListView x:Name="listView_ComEnquete" BorderBrush="Black" BorderThickness="1" Margin="96,76,124.4,132.2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Commentaire"/>
+                    <GridViewColumn Header="Commentaire" DisplayMemberBinding="{Binding Commentaire}"/>
                     <GridViewColumn Header="Supprimer">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="button_SupprimerCom" Content="X"/>
+                                <Button x:Name="button_SupprimerCom" Content="X" Click="ButtonSupprimer_Click"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

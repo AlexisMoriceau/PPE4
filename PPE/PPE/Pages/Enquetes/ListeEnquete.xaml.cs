@@ -23,6 +23,7 @@ namespace PPE.Pages.Enquetes
         public ListeEnquete()
         {
             InitializeComponent();
+            listView_Enquete.Items.Add(Controller.EnqueteDAO.List());  
         }
 
         private void button_modify_Click(object sender, RoutedEventArgs e)

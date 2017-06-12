@@ -128,13 +128,16 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\CadeauQuizzDao.cs" />
+    <Compile Include="Controller\CommentaireEnqueteDAO.cs" />
     <Compile Include="Controller\CommentaireQuizzDAO.cs" />
     <Compile Include="Controller\CommentaireSondageDAO.cs" />
+    <Compile Include="Controller\EnqueteDAO.cs" />
     <Compile Include="Controller\QuestionQuizzDAO.cs" />
     <Compile Include="Controller\QuestionSondageDAO.cs" />
     <Compile Include="Controller\QuizzDAO.cs" />
     <Compile Include="Controller\ReponseQuizzDAO.cs" />
     <Compile Include="Controller\ReponseSondageDAO.cs" />
+    <Compile Include="Controller\SequenceDAO.cs" />
     <Compile Include="Controller\SondageDAO.cs" />
     <Compile Include="Controller\ThemeDAO.cs" />
     <Compile Include="enquete.cs">
