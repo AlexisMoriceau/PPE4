@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PPE.Controller
 {
-    class CommentaireQuizzDAO
+    public class CommentaireQuizzDAO
     {
         public static PPE4Entities db = new PPE4Entities();
 
@@ -22,12 +22,11 @@ namespace PPE.Controller
             return CommenataireQ;
         }
 
-        public static string Delete(commentaire__quizz CommentaireQ)
+        public static void Delete(commentaire__quizz CommentaireQ)
         {
             db.commentaire__quizz.Attach(CommentaireQ);
             db.commentaire__quizz.Remove(CommentaireQ);
             db.SaveChanges();
-            return "le commentaire a bien été supprimé";
         }
     }
 }

@@ -9,9 +9,9 @@
         <Label x:Name="label_Sondage" Margin="0,0,717.4,505.2" Content="Remplissez les différents champs puis valider votre enquête"/>
         <TextBox x:Name="textBox_Nom" Text="Saisir le Nom de votre enquête" Margin="68,39,779.4,460.2" GotFocus="textBox_Nom_GotFocus" TextChanged="textBox_Nom_TextChanged"/>
         <Label x:Name="label_Theme" Margin="630,39,326.4,460.2" Content="Choix du thème :" />
-        <ComboBox x:Name="comboBox_Theme" Margin="752,39,60.4,460.2"/>
+        <ComboBox x:Name="combo_theme" Margin="752,39,60.4,460.2" DisplayMemberPath="Intutile"/>
         <Label x:Name="label_SousTheme" Margin="601,76,326.4,426.2" Content="Choix du sous-thème :"/>
-        <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2"/>
+        <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2" SelectionChanged="comboBox_SousTheme_SelectionChanged"/>
         <Label x:Name="label_Sequence" Margin="68,160,763.4,339.2" Content="Saisissez vos séquences et configurer les"/>
         <ListView x:Name="listView_Enquete" BorderBrush="Black" BorderThickness="1" Margin="68,184,503,156">
             <ListView.View>
@@ -20,7 +20,8 @@
                     <GridViewColumn Header="Modifier">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="button_modify" Content="Modifier" Click="button_modify_Click"/>
+                                <Button x:Name="button_modify" Content="Modifier" Click="button_modify_Click" Command="NavigationCommands.GoToPage"
+                                CommandParameter="/Pages/Enquetes/AjoutSequence.xaml"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -35,8 +36,8 @@
             </ListView.View>
         </ListView>
         <Label x:Name="label_AjoutSequence" Content="Saisir le nom d'une séquence :" Margin="68,390,820.4,109.2"/>
-        <TextBox x:Name="textBox_Sequence" Margin="262,390,326.4,109.2"/>
-        <Button x:Name="button_AjoutSequence" Margin="752,390,198.4,109.2" Content="Ajouter" Click="button_AjoutSequence_Click"/>
+        <Button x:Name="button_AjoutSequence" Margin="243,386,708,113" Content="Ajouter" Click="button_AjoutSequence_Click" Command="NavigationCommands.GoToPage"
+                                CommandParameter="/Pages/Enquetes/AjoutSequence.xaml"/>
         <Button x:Name="button_Valider" Content="Valider" Margin="438,446,461.4,45.2" Click="button_Valider_Click"/>
     </Grid>
 </UserControl>

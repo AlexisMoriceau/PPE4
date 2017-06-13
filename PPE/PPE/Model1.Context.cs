@@ -25,7 +25,7 @@ namespace PPE
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Administrateur> Administrateurs { get; set; }
+        public virtual DbSet<administrateur> administrateurs { get; set; }
         public virtual DbSet<cadeau> cadeaux { get; set; }
         public virtual DbSet<commentaire__enquete> commentaire__enquete { get; set; }
         public virtual DbSet<commentaire__quizz> commentaire__quizz { get; set; }

@@ -10,7 +10,7 @@
         <ListView x:Name="listView_Question" Margin="20,48,132.4,314.2" BorderBrush="Black" BorderThickness="1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Intitulé de la question"/>
+                    <GridViewColumn Header="Intitulé de la question" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -20,7 +20,7 @@
         <ListView x:Name="listView_Reponse" BorderBrush="Black" BorderThickness="1" Margin="20,282,132.4,80.2">
                 <ListView.View>
                     <GridView>
-                    <GridViewColumn Header="Intitulé de la réponse"/>
+                    <GridViewColumn Header="Intitulé de la réponse" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View>
         </ListView>
