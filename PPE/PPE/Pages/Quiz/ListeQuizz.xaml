@@ -11,13 +11,12 @@
             <ListView x:Name="listView_Quizz" BorderBrush="Black" BorderThickness="1" Height="600" Width="956">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Nom"/>
-                        <GridViewColumn Header="Thème"/>
+                        <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Intitule}"/>
                         <GridViewColumn Header="Nombre de participant"/>
                         <GridViewColumn Header="Modifier">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="button_modify" Content="Modifier" Click="button_modify_Click"/>
+                                    <Button x:Name="button_modify" Content="Modifier" Click="button_modify_Click" Command="NavigationCommands.GoToPage" CommandParameter="/Pages/Quiz/ModificationQuiz.xaml"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

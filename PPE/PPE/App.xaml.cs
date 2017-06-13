@@ -13,5 +13,6 @@ namespace PPE
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

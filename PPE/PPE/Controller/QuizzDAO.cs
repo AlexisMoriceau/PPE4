@@ -39,7 +39,7 @@ namespace PPE.Controller
             db.quizzs.Attach(Quizz);
             db.Entry(Quizz).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-            return "Mofication effectué";
+            return "le";
         }
 
         public static string Delete (quizz Quizz)
@@ -47,7 +47,6 @@ namespace PPE.Controller
             ///<summary>
             ///Permet la suppresion d'un quizz
             /// </summary>
-
             db.quizzs.Attach(Quizz);
             db.quizzs.Remove(Quizz);
             db.SaveChanges();

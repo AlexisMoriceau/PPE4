@@ -23,7 +23,10 @@ namespace PPE.Pages.Quiz
         public ModificationQuiz()
         {
             InitializeComponent();
+
+            
         }
+        public quizz quizz22;
 
         private void button_ModfierQuestion_Click(object sender, RoutedEventArgs e)
         {

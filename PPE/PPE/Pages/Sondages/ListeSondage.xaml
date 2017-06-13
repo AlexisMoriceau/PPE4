@@ -17,7 +17,7 @@
                         <GridViewColumn Header="Modifier">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="button_modify" Content="Modifier" Click="button_modify_Click"/>
+                                    <Button x:Name="button_modify" Content="Modifier" Click="button_modify_Click" Command="NavigationCommands.GoToPage" CommandParameter="/Pages/Sondages/ModificationSondage.xaml"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
