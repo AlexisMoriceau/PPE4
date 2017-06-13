@@ -31,7 +31,7 @@ namespace PPE.Controller
             return Quizz;
         }
 
-        public static string Modify(quizz Quizz)
+        public static void Modify(quizz Quizz)
         {
             ///<summary>
             ///Prend en parametre un quizz le modifie et affiche un message qui confirme la modification
@@ -39,10 +39,9 @@ namespace PPE.Controller
             db.quizzs.Attach(Quizz);
             db.Entry(Quizz).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-            return "Mofication effectué";
         }
 
-        public static string Delete (quizz Quizz)
+        public static void Delete (quizz Quizz)
         {
             ///<summary>
             ///Permet la suppresion d'un quizz
@@ -51,10 +50,9 @@ namespace PPE.Controller
             db.quizzs.Attach(Quizz);
             db.quizzs.Remove(Quizz);
             db.SaveChanges();
-            return "Le Quizz a bien été supprimé";
         }
 
-        public static string Add(quizz Quizz)
+        public static void Add(quizz Quizz)
         {
             ///<summary>
             ///Permet l'ajout d'un nouveau quizz
@@ -62,7 +60,6 @@ namespace PPE.Controller
 
             db.quizzs.Add(Quizz);
             db.SaveChanges();
-            return "Le nouveau Quizz a été correctement ajouté";
         }
 
     }

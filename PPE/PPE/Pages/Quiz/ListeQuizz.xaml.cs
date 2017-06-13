@@ -23,17 +23,19 @@ namespace PPE.Pages.Quiz
         public ListeQuizz()
         {
             InitializeComponent();
-         
+            listView_Quizz.ItemsSource = Controller.QuizzDAO.List();
+            listView_Quizz.Items.Refresh();       
         }
+        public quizz quizz22;
 
         private void button_modify_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {
-
+            //listView_Quizz.SelectedValue = Controller.QuizzDAO.Delete(quizz22);
         }
     }
 }

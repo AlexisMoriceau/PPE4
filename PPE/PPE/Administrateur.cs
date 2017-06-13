@@ -12,7 +12,7 @@ namespace PPE
     using System;
     using System.Collections.Generic;
     
-    public partial class Administrateur
+    public partial class administrateur
     {
         public int id { get; set; }
         public string Login { get; set; }

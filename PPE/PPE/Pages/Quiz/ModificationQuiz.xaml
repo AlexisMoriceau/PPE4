@@ -6,21 +6,21 @@
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
-        <Label x:Name="label_ChoixQuestion" Content="Choisissez la question à modifier pour le quizz choisi dans la liste ci-dessous" Margin="20,20,600.4,480.2"/>
+        <Label x:Name="label_ChoixQuestion" Content="Choisissez la question à modifier dans la liste ci-dessous" Margin="20,20,600.4,480.2"/>
         <ListView x:Name="listView_Question" Margin="20,48,132.4,314.2" BorderBrush="Black" BorderThickness="1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Intitulé de la question"/>
+                    <GridViewColumn Header="Intitulé de la question" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <TextBox x:Name="textBox_ModifQuestion" Margin="20,214,132.4,282.2"/>
         <Button x:Name="button_ValiderQuestion" Margin="953,214,10.4,282.2" Content="Modifier"/>
-        <Label x:Name="label_ChoixReponse" Content="Choisissez la réponse que à modifier dans la liste ci-dessous" Margin="20,250,555.4,246.2"/>
+        <Label x:Name="label_ChoixReponse" Content="Choisissez la réponse à modifier dans la liste ci-dessous" Margin="20,250,555.4,246.2"/>
         <ListView x:Name="listView_Reponse" BorderBrush="Black" BorderThickness="1" Margin="20,282,132.4,80.2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Intitulé de la réponse"/>
+                    <GridViewColumn Header="Intitulé de la réponse" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View>
         </ListView>

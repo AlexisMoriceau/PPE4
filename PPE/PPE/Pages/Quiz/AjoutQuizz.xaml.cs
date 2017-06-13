@@ -23,12 +23,14 @@ namespace PPE.Pages.Quiz
         public AjoutQuizz()
         {
             InitializeComponent();
+            
+            button_AjoutReponse.IsEnabled = false;
+            button_AjoutQuestion.IsEnabled = false;
+            button_Ajouter.IsEnabled = true;
             button_Valider.IsEnabled = true;
-            button_AjoutReponse.IsEnabled = true;
-            button_AjoutQuestion.IsEnabled = true;
-            button_Ajouter.IsEnabled = true;  
         }
         public quizz quizz22;
+
         public static PPE4Entities db = new PPE4Entities();
 
         public static List<reponse__quizz> R = new List<reponse__quizz>();
@@ -37,7 +39,7 @@ namespace PPE.Pages.Quiz
         #region Fonction BoutonEnable
         private void BoutonEnableA()
         {
- /*           if(listView_Question.Items.Count == 1 || listView_Reponse.Items.Count > 0)
+        /*    if(listView_Question.Items.Count == 1 || R == null)
             {
                 button_Ajouter.IsEnabled = false;
             }
@@ -49,37 +51,37 @@ namespace PPE.Pages.Quiz
 
         private void BoutonEnableQ()
         {
-    /*        if(Q == null)
+            if(textBox_Question.Text == "")
             {
                 button_AjoutQuestion.IsEnabled = false;
             }
             else
             {
                 button_AjoutQuestion.IsEnabled = true;
-            }*/
+            }
         }
 
         private void BoutonEnableR()
         {
-      /*      if (R == null)
+            if (textBox_Reponse.Text == "")
             {
                 button_AjoutReponse.IsEnabled = false;
             }
             else
             {
                 button_AjoutReponse.IsEnabled = true;
-            }*/
+            }
         }
 
         private void BoutonEnableV()
-        {
-          /*  if (textBox_Nom.Text == "" || listView_Question.Items == null || listView_Reponse.Items == null)
+        {       
+             /* if (R == null)
               {
                  button_Valider.IsEnabled = false;
               }
               else
               {
-                  button_Valider.IsEnabled = true;
+                button_Valider.IsEnabled = true;
               }*/
         }
         #endregion
@@ -93,40 +95,35 @@ namespace PPE.Pages.Quiz
         {
             var reponse = new reponse__quizz { Intitule = textBox_Reponse.Text };
             R.Add(reponse);
-            listView_Reponse.ItemsSource = (R);
-            textBox_Reponse.Clear();
+            listView_Reponse.ItemsSource = R;
+            listView_Reponse.Items.Refresh();
         }
 
         private void button_AjoutQuestion_Click(object sender, RoutedEventArgs e)
         {
             var question = new question__quizz { Intitule = textBox_Question.Text };
             Q.Add(question);
-            listView_Question.ItemsSource = (Q);
-            textBox_Question.Clear();
+            listView_Question.ItemsSource = Q;
+            listView_Question.Items.Refresh();
         }
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
             quizz22 = new quizz { Intitule = textBox_Nom.Text };
-            db.quizzs.Add(quizz22);
-            textBox_Question.Clear();
-            textBox_Nom.Clear();
-            textBox_Reponse.Clear();
-            listView_Question.Items.Clear();
-            listView_Reponse.Items.Clear();
+            Controller.QuizzDAO.Add(quizz22);
             MessageBox.Show("Votre quizz a été ajouté, il reste modifiable en cas d'erreur de saisie");
+
         }
 
         private void button_Ajouter_Click(object sender, RoutedEventArgs e)
         {
             var question = new question__quizz { Intitule = listView_Question.Items.ToString() };
             question.quizz = quizz22;
-            db.question__quizz.Add(question);
+            Controller.QuestionQuizzDAO.Add(question);
             foreach (var item in R)
             {
                 item.question__quizz = question;
-                db.reponse__quizz.Add(item);
-                textBox_Reponse.Clear();                         
+                Controller.ReponseQuizzDAO.Add(item);                         
             }
         }
 
@@ -136,17 +133,21 @@ namespace PPE.Pages.Quiz
         private void textBox_Question_TextChanged(object sender, TextChangedEventArgs e)
         {
             BoutonEnableQ();
+           // BoutonEnableA();
         }
 
         private void textBox_Reponse_TextChanged(object sender, TextChangedEventArgs e)
         {
             BoutonEnableR();
+          //  BoutonEnableA();
         }
 
         private void textBox_Nom_TextChanged(object sender, TextChangedEventArgs e)
         {
             BoutonEnableV();
         }
+
         #endregion
+
     }
 }

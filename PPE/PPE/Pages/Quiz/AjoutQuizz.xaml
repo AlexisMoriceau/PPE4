@@ -4,14 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-             mc:Ignorable="d" Height="567.2" Width="1090.167" Background="#FFFAF7F7">
+             mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
         <Label x:Name="label_Quizz" Margin="0,0,717.4,505.2" Content="Remplissez les différents champs puis valider votre quizz"/>
         <TextBox x:Name="textBox_Nom" Text="Saisir le Nom de votre quizz" Margin="307,52,540.4,447.2" GotFocus="textBox_Nom_GotFocus" TextChanged="textBox_Nom_TextChanged"/>
         <ListView x:Name="listView_Question" Margin="68,127,225.4,280.2" BorderBrush="Black" BorderThickness="1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Intitule}"/>
+                    <GridViewColumn Header="Intitulé de la question" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -21,7 +21,7 @@
         <ListView x:Name="listView_Reponse" BorderBrush="Black" BorderThickness="1" Margin="68,287,225.4,120.2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Intitule}"/>
+                    <GridViewColumn Header="Intitulé de la réponse" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View> 
         </ListView>

@@ -23,6 +23,7 @@ namespace PPE.Pages.Sondages
         public ListeSondage()
         {
             InitializeComponent();
+            listView_Sondage.ItemsSource = Controller.SequenceDAO.List();
         }
 
         private void button_modify_Click(object sender, RoutedEventArgs e)
