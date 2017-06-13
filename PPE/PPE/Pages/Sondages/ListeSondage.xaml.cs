@@ -33,6 +33,11 @@ namespace PPE.Pages.Sondages
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {
+            Button bouton = (Button)sender;
+            Controller.SondageDAO.Delete((PPE.sondage)bouton.DataContext);
+            listView_Sondage.ItemsSource = null;
+            listView_Sondage.Items.Clear();
+            listView_Sondage.ItemsSource = (Controller.SondageDAO.List());
 
         }
     }

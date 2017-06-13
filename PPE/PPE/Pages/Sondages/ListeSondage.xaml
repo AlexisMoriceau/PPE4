@@ -13,7 +13,6 @@
                     <GridView>
                         <GridViewColumn Header="Nom"/>
                         <GridViewColumn Header="Thème"/>
-                        <GridViewColumn Header="Nombre de participant"/>
                         <GridViewColumn Header="Modifier">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>

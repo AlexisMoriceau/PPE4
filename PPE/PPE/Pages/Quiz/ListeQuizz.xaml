@@ -12,7 +12,6 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Intitule}"/>
-                        <GridViewColumn Header="Nombre de participant"/>
                         <GridViewColumn Header="Modifier">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>

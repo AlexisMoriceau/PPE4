@@ -26,6 +26,7 @@ namespace PPE.Pages.Quiz
             listView_Quizz.ItemsSource = Controller.QuizzDAO.List();
             listView_Quizz.Items.Refresh();       
         }
+
         public quizz quizz22;
 
         private void button_modify_Click(object sender, RoutedEventArgs e)
@@ -35,7 +36,12 @@ namespace PPE.Pages.Quiz
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {
-            //listView_Quizz.SelectedValue = Controller.QuizzDAO.Delete(quizz22);
+            Button bouton = (Button)sender;
+            Controller.QuizzDAO.Delete((PPE.quizz)bouton.DataContext);
+            listView_Quizz.ItemsSource = null;
+            listView_Quizz.Items.Clear();
+            listView_Quizz.ItemsSource = (Controller.QuizzDAO.List());
+            listView_Quizz.Items.Refresh();
         }
     }
 }

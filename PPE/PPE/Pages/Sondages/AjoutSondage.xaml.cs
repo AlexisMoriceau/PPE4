@@ -75,7 +75,7 @@ namespace PPE.Pages.Sondages
 
         private void BoutonEnableV()
         {
-            if( textBox_Nom.Text =="" || listView_Question.Items == null || listView_Reponse.Items == null || comboBox_Theme.Items == null)
+            if(/*textBox_Nom.Text =="" ||*/ listView_Question.Items == null /*|| listView_Reponse.Items == null || comboBox_Theme.Items == null*/)
             {
                 button_Valider.IsEnabled = false;
             }
@@ -97,7 +97,7 @@ namespace PPE.Pages.Sondages
             R.Add(reponse);
             listView_Reponse.ItemsSource = (R);
         }
-
+        
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
             sondage22 = new PPE.sondage { Intitule = textBox_Nom.Text };

@@ -26,6 +26,6 @@
         </ListView>
         <TextBox x:Name="textBox_ModifReponse" Margin="20,448,132.4,48.2"/>
         <Button x:Name="button_ValiderReponse" Content="Modifier" Margin="953,448,10.4,48.2"/>
-        <Button x:Name="button_Valider" Content="Valider" Margin="449,480,433.4,10.2"/>
+        <Button x:Name="button_Valider" Content="Valider" Margin="449,480,433.4,10.2" Click="button_Valider_Click"/>
     </Grid>
 </UserControl>

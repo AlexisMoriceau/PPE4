@@ -112,7 +112,23 @@ namespace PPE.Pages.Quiz
             quizz22 = new quizz { Intitule = textBox_Nom.Text };
             Controller.QuizzDAO.Add(quizz22);
             MessageBox.Show("Votre quizz a été ajouté, il reste modifiable en cas d'erreur de saisie");
-
+            foreach (var itemz in listView_Question.Items)
+            {
+                var question = new question__quizz { Intitule = (itemz as question__quizz).Intitule };
+                foreach (var r in listView_Reponse.Items)
+                {
+                    var reponse = new reponse__quizz { Intitule = (r as reponse__quizz).Intitule};
+                }
+                foreach (var item in Q)
+                {
+                    Controller.QuestionQuizzDAO.Add(question);
+                    foreach (var items in R)
+                    {
+                        items.question__quizz = question;
+                        Controller.ReponseQuizzDAO.Add(items);
+                    }
+                }
+            }
         }
 
         private void button_Ajouter_Click(object sender, RoutedEventArgs e)
