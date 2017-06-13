@@ -27,11 +27,10 @@ namespace PPE.Pages.Quiz
             listView_Quizz.Items.Refresh();       
         }
 
-        public quizz quizz22;
-
         private void button_modify_Click(object sender, RoutedEventArgs e)
         {
-            
+            Button bouton = (Button)sender;
+            (App.Current as App).modifquiz = ((PPE.quizz)bouton.DataContext);
         }
 
         private void button_delete_Click(object sender, RoutedEventArgs e)

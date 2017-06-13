@@ -23,10 +23,7 @@ namespace PPE.Pages.Quiz
         public ModificationQuiz()
         {
             InitializeComponent();
-
-
         }
-        public quizz quizz22;
 
         private void button_ModfierQuestion_Click(object sender, RoutedEventArgs e)
         {
@@ -39,7 +36,7 @@ namespace PPE.Pages.Quiz
         private void button_ModifierReponse_Click(object sender, RoutedEventArgs e)
         {
             reponse__quizz rq = new reponse__quizz() { Intitule = textBox_ModifReponse.Text };
-            (App.Current as App).newquestionquiz.reponse__quizz.Add(rq);
+          //  (App.Current as App).newquestionquiz.reponse__quizz.Add(rq);
             listView_Reponse.Items.Add(rq);
             listView_Reponse.Items.Refresh();
         }

@@ -28,7 +28,8 @@ namespace PPE.Pages.Sondages
 
         private void button_modify_Click(object sender, RoutedEventArgs e)
         {
-
+            Button bouton = (Button)sender;
+            (App.Current as App).modifsondage = ((PPE.sondage)bouton.DataContext);
         }
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
