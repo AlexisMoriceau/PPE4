@@ -23,16 +23,28 @@ namespace PPE.Pages.Enquetes
         public ListeEnquete()
         {
             InitializeComponent();
-            listView_Enquete.Items.Add(Controller.EnqueteDAO.List());  
+              
         }
-
+        private void OnLoad(object sender, RoutedEventArgs e)
+        {
+            listView_Enquete.ItemsSource = null;
+            listView_Enquete.Items.Clear();
+            listView_Enquete.ItemsSource = (Controller.EnqueteDAO.List());
+        }
         private void button_modify_Click(object sender, RoutedEventArgs e)
         {
-
+            Button btn = (Button)sender;
+            (App.Current as App).enquetemodif = ((PPE.enquete)btn.DataContext);
         }
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {
+            Button btn = (Button)sender;
+            Controller.EnqueteDAO.Delete((PPE.enquete)btn.DataContext);
+            listView_Enquete.ItemsSource = null;
+            listView_Enquete.Items.Clear();
+            listView_Enquete.ItemsSource = (Controller.EnqueteDAO.List());
+
 
         }
     }

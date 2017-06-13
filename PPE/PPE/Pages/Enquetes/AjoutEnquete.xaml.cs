@@ -24,10 +24,17 @@ namespace PPE.Pages.Enquetes
         {
             InitializeComponent();
             combo_theme.ItemsSource = Controller.ThemeDAO.List();
+            listView_Enquete.ItemsSource = (App.Current as App).listequestion;
             
         }
+        private void OnLoad(object sender, RoutedEventArgs e)
+        {
+            listView_Enquete.ItemsSource = null;
+            listView_Enquete.Items.Clear();
+            listView_Enquete.ItemsSource = (App.Current as App).listequestion;
+        }
 
-      private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
+        private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
         {
           //  textBox_Nom.Text = "";
         } 
@@ -39,10 +46,15 @@ namespace PPE.Pages.Enquetes
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
-            PPE.enquete lol = new PPE.enquete();
-            lol.sequences = (App.Current as App).listeseq;
-   
 
+            theme letheme = combo_theme.SelectedItem as PPE.theme;
+            PPE.enquete newEnquete = new PPE.enquete { Intitule = textBox_Nom.Text,theme =  letheme };
+            foreach (var item in (App.Current as App).listeseq)
+            {
+                newEnquete.sequences.Add(item);
+            }     
+            Controller.EnqueteDAO.Add(newEnquete);
+          
         }
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {

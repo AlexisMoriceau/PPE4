@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3edc86954e2b49859de6927b72040cc5" Name="Diagram1">
+      <Diagram DiagramId="3edc86954e2b49859de6927b72040cc5" Name="Diagram1" ZoomLevel="55">
         <EntityTypeShape EntityType="PPE4Model.Administrateur" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PPE4Model.cadeau" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="PPE4Model.commentaire__enquete" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PPE4Model.commentaire__enquete" Width="2.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PPE4Model.commentaire__quizz" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PPE4Model.commentaire__sondage" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PPE4Model.enquete" Width="1.5" PointX="1.5" PointY="20.875" IsExpanded="true" />

@@ -42,12 +42,12 @@
         <AssociationConnector Association="PPE4Model.FK_2FBE2205FB88E14F" ManuallyRouted="false" />
         <AssociationConnector Association="PPE4Model.FK_1EDA4390BAF4AE56" ManuallyRouted="false" />
         <AssociationConnector Association="PPE4Model.FK_1EDA4390FB88E14F" ManuallyRouted="false" />
-        <AssociationConnector Association="PPE4Model.equete_theme" ManuallyRouted="false" />
         <AssociationConnector Association="PPE4Model.reponse_sequence_utilisateur" ManuallyRouted="false" />
         <AssociationConnector Association="PPE4Model.reponse_utilisateur" ManuallyRouted="false" />
         <AssociationConnector Association="PPE4Model.reponses_quizz" ManuallyRouted="false" />
         <AssociationConnector Association="PPE4Model.sondage_theme" ManuallyRouted="false" />
         <AssociationConnector Association="PPE4Model.theme_theme" ManuallyRouted="false" />
+        <AssociationConnector Association="PPE4Model.FK_D6D86B2959027487" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
