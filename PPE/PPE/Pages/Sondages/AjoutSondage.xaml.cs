@@ -23,16 +23,14 @@ namespace PPE.Pages.Sondages
         public AjoutSondage()
         {
             InitializeComponent();
-            button_Ajouter.IsEnabled = false;
-            button_AjoutQuestion.IsEnabled = false;
-            button_AjoutReponse.IsEnabled = false;
-            button_Valider.IsEnabled = false;
-            comboBox_Theme.ItemsSource = Controller.ThemeDAO.List();
-            comboBox_SousTheme.ItemsSource = Controller.ThemeDAO.List();
+            button_Ajouter.IsEnabled = true;
+            button_AjoutQuestion.IsEnabled = true;
+            button_AjoutReponse.IsEnabled = true;
+            button_Valider.IsEnabled = true;
+            comboBox_Theme.ItemsSource = (Controller.ThemeDAO.List());
         }
         public PPE.sondage sondage22;
         public static PPE4Entities db = new PPE4Entities();
-
         public static List<question__sondage> Q;
         public static List<reponse__sondage> R;
 
@@ -73,17 +71,7 @@ namespace PPE.Pages.Sondages
             }
         }
 
-        private void BoutonEnableV()
-        {
-            if(/*textBox_Nom.Text =="" ||*/ listView_Question.Items == null /*|| listView_Reponse.Items == null || comboBox_Theme.Items == null*/)
-            {
-                button_Valider.IsEnabled = false;
-            }
-            else
-            {
-                button_Valider.IsEnabled = true;
-            }
-        }
+        
         #endregion
 
         private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
@@ -141,14 +129,14 @@ namespace PPE.Pages.Sondages
             BoutonEnableQ();
         }
 
-        private void textBox_Nom_TextChanged(object sender, TextChangedEventArgs e)
+      /*  private void textBox_Nom_TextChanged(object sender, TextChangedEventArgs e)
         {
             BoutonEnableV();
         }
         private void comboBox_Theme_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             BoutonEnableV();
-        }
+        }*/
         #endregion
     }
 }

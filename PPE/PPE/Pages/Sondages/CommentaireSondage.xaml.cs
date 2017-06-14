@@ -23,6 +23,18 @@ namespace PPE.Pages.Sondages
         public CommentaireSondage()
         {
             InitializeComponent();
+            listView_ComSondage.ItemsSource = Controller.CommentaireSondageDAO.List();
+            listView_ComSondage.Items.Refresh();
+        }
+
+        private void button_SupprimerCom_Click(object sender, RoutedEventArgs e)
+        {
+            Button bouton = (Button)sender;
+            Controller.CommentaireSondageDAO.Delete((PPE.commentaire__sondage)bouton.DataContext);
+            listView_ComSondage.ItemsSource = null;
+            listView_ComSondage.Items.Clear();
+            listView_ComSondage.ItemsSource = Controller.CommentaireSondageDAO.List();
+            listView_ComSondage.Items.Refresh();
         }
     }
 }

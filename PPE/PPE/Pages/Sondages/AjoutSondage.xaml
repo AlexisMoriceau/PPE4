@@ -7,11 +7,11 @@
              mc:Ignorable="d" Height="567.2" Width="1090.167">
     <Grid Style="{StaticResource ContentRoot}">
         <Label x:Name="label_Sondage" Margin="0,0,717.4,505.2" Content="Remplissez les différents champs puis valider votre sondage"/>
-        <TextBox x:Name="textBox_Nom" Text="Saisir le Nom de votre sondage" Margin="68,39,779.4,460.2" GotFocus="textBox_Nom_GotFocus" TextChanged="textBox_Nom_TextChanged"/>
+        <TextBox x:Name="textBox_Nom" Text="Saisir le Nom de votre sondage" Margin="68,39,779.4,460.2" GotFocus="textBox_Nom_GotFocus" />
         <Label x:Name="label_Theme" Margin="630,39,326.4,460.2" Content="Choix du thème :" />
-        <ComboBox x:Name="comboBox_Theme" Margin="752,39,60.4,460.2" DataContextChanged="comboBox_Theme_DataContextChanged"/>
+        <ComboBox x:Name="comboBox_Theme" Margin="752,39,60.4,460.2" DisplayMemberPath="{Binding Intitule}"/>
         <Label x:Name="label_SousTheme" Margin="601,76,326.4,426.2" Content="Choix du sous-thème :"/>
-        <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2"/>
+        <ComboBox x:Name="comboBox_SousTheme" Margin="752,76,60.4,423.2" DisplayMemberPath="{Binding Intitule}"/>
         <ListView x:Name="listView_Question" BorderBrush="Black" BorderThickness="1" Margin="68,126,226.4,283.2">
             <ListView.View>
                 <GridView>

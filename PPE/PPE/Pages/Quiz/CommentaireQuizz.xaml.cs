@@ -23,6 +23,18 @@ namespace PPE.Pages.Quiz
         public CommentaireQuizz()
         {
             InitializeComponent();
+            listView_ComQuizz.ItemsSource = Controller.CommentaireQuizzDAO.List();
+            listView_ComQuizz.Items.Refresh();
+        }
+
+        private void button_SupprimerCom_Click(object sender, RoutedEventArgs e)
+        {
+            Button bouton = (Button)sender;
+            Controller.CommentaireQuizzDAO.Delete((PPE.commentaire__quizz)bouton.DataContext);
+            listView_ComQuizz.ItemsSource = null;
+            listView_ComQuizz.Items.Clear();
+            listView_ComQuizz.ItemsSource = (Controller.CommentaireQuizzDAO.List());
+            listView_ComQuizz.Items.Refresh();
         }
     }
 }

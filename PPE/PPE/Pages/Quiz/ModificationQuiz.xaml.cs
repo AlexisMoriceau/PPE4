@@ -36,7 +36,6 @@ namespace PPE.Pages.Quiz
         private void button_ModifierReponse_Click(object sender, RoutedEventArgs e)
         {
             reponse__quizz rq = new reponse__quizz() { Intitule = textBox_ModifReponse.Text };
-          //  (App.Current as App).newquestionquiz.reponse__quizz.Add(rq);
             listView_Reponse.Items.Add(rq);
             listView_Reponse.Items.Refresh();
         }
