@@ -23,16 +23,18 @@ namespace PPE.Pages.Thème
         public ListeTheme()
         {
             InitializeComponent();
-        }
-
-        private void button_modify_Click(object sender, RoutedEventArgs e)
-        {
-
+            listView_Theme.ItemsSource = Controller.ThemeDAO.List();
+            listView_Theme.Items.Refresh();
         }
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {
-
+            Button bouton = (Button)sender;
+            Controller.ThemeDAO.Delete((PPE.theme)bouton.DataContext);
+            listView_Theme.ItemsSource = null;
+            listView_Theme.Items.Clear();
+            listView_Theme.ItemsSource = (Controller.ThemeDAO.List());
+            listView_Theme.Items.Refresh();
         }
     }
 }

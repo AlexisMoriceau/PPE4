@@ -22,8 +22,7 @@ namespace PPE.Pages.Quiz
     {
         public AjoutQuizz()
         {
-            InitializeComponent();
-            
+            InitializeComponent();  
             button_AjoutReponse.IsEnabled = false;
             button_AjoutQuestion.IsEnabled = false;
             button_Ajouter.IsEnabled = true;
@@ -109,15 +108,14 @@ namespace PPE.Pages.Quiz
 
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
-            quizz22 = new quizz { Intitule = textBox_Nom.Text };
-            Controller.QuizzDAO.Add(quizz22);
+            quizz22 = new quizz { Intitule = textBox_Nom.Text};
             MessageBox.Show("Votre quizz a été ajouté, il reste modifiable en cas d'erreur de saisie");
-            foreach (var itemz in listView_Question.Items)
+            foreach (var itemq in listView_Question.Items)
             {
-                var question = new question__quizz { Intitule = (itemz as question__quizz).Intitule };
-                foreach (var r in listView_Reponse.Items)
+                var question = new question__quizz { Intitule = (itemq as question__quizz).Intitule };
+                foreach (var itemr in listView_Reponse.Items)
                 {
-                    var reponse = new reponse__quizz { Intitule = (r as reponse__quizz).Intitule};
+                    var reponse = new reponse__quizz { Intitule = (itemr as reponse__quizz).Intitule};
                 }
                 foreach (var item in Q)
                 {
@@ -129,6 +127,7 @@ namespace PPE.Pages.Quiz
                     }
                 }
             }
+            Controller.QuizzDAO.Add(quizz22);
         }
 
         private void button_Ajouter_Click(object sender, RoutedEventArgs e)

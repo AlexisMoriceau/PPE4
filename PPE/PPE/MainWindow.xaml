@@ -31,6 +31,11 @@
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
 
+        <mui:LinkGroup DisplayName="Thème">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="" Source="/Pages/Thème/Theme.xaml"/>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
 
         <mui:LinkGroup DisplayName="Paramètres" GroupKey="settingss">
             <mui:LinkGroup.Links>

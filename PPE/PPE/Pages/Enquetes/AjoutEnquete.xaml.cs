@@ -48,7 +48,7 @@ namespace PPE.Pages.Enquetes
         {
 
             theme letheme = combo_theme.SelectedItem as PPE.theme;
-            PPE.enquete newEnquete = new PPE.enquete { Intitule = textBox_Nom.Text,theme =  letheme };
+            PPE.enquete newEnquete = new PPE.enquete { Intitule = textBox_Nom.Text, themes = letheme.themes};
             foreach (var item in (App.Current as App).listeseq)
             {
                 newEnquete.sequences.Add(item);

@@ -36,6 +36,11 @@ namespace PPE.Controller
             db.SaveChanges();
         }
 
-
+        public static void Delete (theme Theme)
+        {
+            db.themes.Attach(Theme);
+            db.themes.Remove(Theme);
+            db.SaveChanges();
+        }
     }
 }

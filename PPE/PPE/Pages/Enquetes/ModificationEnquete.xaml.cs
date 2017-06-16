@@ -26,9 +26,10 @@ namespace PPE.Pages.Enquetes
             textBox_Nom.Text = (App.Current as App).enquetemodif.Intitule;
             listView_Enquete.ItemsSource = (App.Current as App).enquetemodif.sequences;
             combo_theme.ItemsSource = Controller.ThemeDAO.List();
-            combo_theme.SelectedValue = (App.Current as App).enquetemodif.theme;
+            combo_theme.SelectedValue = (App.Current as App).enquetemodif.themes;
         }
 
+        public theme theme;
         private void button_Modifier_Click(object sender, RoutedEventArgs e)
         {
 
@@ -51,7 +52,7 @@ namespace PPE.Pages.Enquetes
         private void button_Valider_Click(object sender, RoutedEventArgs e)
         {
 
-            PPE.enquete newEnquete = new PPE.enquete { Intitule = textBox_Nom.Text, theme = combo_theme.SelectedItem as theme };
+            PPE.enquete newEnquete = new PPE.enquete { Intitule = textBox_Nom.Text };
             newEnquete.sequences.Add((App.Current as App).newsequence);
             Controller.EnqueteDAO.Add(newEnquete);
 

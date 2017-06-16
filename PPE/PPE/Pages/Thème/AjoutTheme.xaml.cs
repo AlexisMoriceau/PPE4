@@ -24,12 +24,18 @@ namespace PPE.Pages.Thème
         {
             InitializeComponent();
         }
+        public theme theme22;
 
-        private void button_Valider_Click(object sender, RoutedEventArgs e)
+        private void textBox_Nom_GotFocus(object sender, RoutedEventArgs e)
         {
-            theme newtheme = new theme { Intutile = textBox_NomTheme.Text };
-            Controller.ThemeDAO.addtheme(newtheme);
+            textBox_Nom.Text = "";
+        }
 
+        private void button_Valider_Click_1(object sender, RoutedEventArgs e)
+        {
+            theme22 = new theme { Intutile = textBox_Nom.Text };
+            Controller.ThemeDAO.addtheme(theme22);
+            MessageBox.Show("Votre thème à bien été ajouté");
         }
     }
 }

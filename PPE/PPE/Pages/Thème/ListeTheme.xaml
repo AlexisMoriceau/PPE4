@@ -8,17 +8,10 @@
              d:DesignHeight="758" d:DesignWidth="1004">
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
-            <ListView x:Name="listView_Sondage" Height="600" Width="956" BorderBrush="Black" BorderThickness="1">
+            <ListView x:Name="listView_Theme" Height="600" Width="956" BorderBrush="Black" BorderThickness="1">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Nom"/>
-                        <GridViewColumn Header="Modifier">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button x:Name="button_modify" Content="Modifier" Click="button_modify_Click"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                        <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Intutile}"/>
                         <GridViewColumn Header="Supprimer">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
